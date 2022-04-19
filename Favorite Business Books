@@ -1,0 +1,48 @@
+<html>
+    <header style = "font-size: 16px; color: white; text-align: center; background-color:rgb(0, 217, 255)">
+                Portfolio Work from Holly Robillard
+    </header>   
+    
+    <body>
+
+    <h1 style = "color: rgb(107, 0, 128); text-align: center">
+            BEST BUSINESS BOOKS
+    </h1>
+
+    <img src="https://p1.pxfuel.com/preview/545/670/380/book-read-literature-learn.jpg" alt="Reading" width="100%">
+
+    <h2>
+        Introduction
+    </h2>
+    <p>
+        Books are incredibly powerful. They can take us to mystical worlds that our imaginary friend would love. They can make us feel a deep love and sense of romance in relationships we aren't even a part of. And they can make us fear everyone around us based on the the vivid details of a serial killer.
+        <br>
+        <br>
+        Books can teach us so many things. So why can't they also teach us how to work more effectively? Or how to communicate better with others? Or be more efficient?
+        <br>
+        <br>
+        Well... they can.
+        <br>
+        <br>
+        I've put together this list of some of my favorite business books. I truly beleive that have changed my life and helped me see my professional career in a whole new light. And now, I hope they can do the same for you.
+    </p>
+
+    <h3>
+        <b>Behavioral Economics:</b>  
+    </h3>
+    <p>
+        <a href="https://www.amazon.com/Predictably-Irrational-Revised-Expanded-Decisions/dp/0061353248">Predictably Irrational - Dan Ariely</a>
+        <br>
+        <a href="https://www.amazon.com/Thinking-Fast-Slow-Daniel-Kahneman/dp/0374533555/ref=asc_df_0374533555/?tag=hyprod-20&linkCode=df0&hvadid=312371602209&hvpos=&hvnetw=g&hvrand=6061751653396888841&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9003189&hvtargid=pla-395340046230&psc=1&tag=&ref=&adgrpid=61011965686&hvpone=&hvptwo=&hvadid=312371602209&hvpos=&hvnetw=g&hvrand=6061751653396888841&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9003189&hvtargid=pla-395340046230">Thinking, Fast and Slow - Daniel Kahneman</a> 
+        <br>
+        <a href="https://www.amazon.com/Freakonomics-Economist-Explores-Hidden-Everything/dp/0060731338">Freakonomics: A Rogue Economist Explores the Hidden Side of Everything - Steven Levitt</a>
+    </p> 
+    
+    </body>
+   
+    <footer style = "font-size: 16px; color: white; text-align: center; background-color:rgb(0, 217, 255)">
+        Connect with me on <a href="https://www.linkedin.com/in/hollyrobillard/"> LinkedIn</a>!
+        <br>
+        Connect with me on <a href="https://github.com/hollyrobillard"> Github</a>!
+    </footer>
+</html>

@@ -28,6 +28,17 @@
     </p>
 
     <h3>
+        <b>Leadership:</b>  
+    </h3>
+    <p>
+        <a href="https://www.amazon.com/Start-Why-Leaders-Inspire-Everyone/dp/1591846447"> Start with Why: How Great Leaders Inspire Everyone to Take Action - Simon Sinek</a>
+        <br>
+        <a href="https://www.amazon.com/Dare-Lead-Brave-Conversations-Hearts/dp/0399592520/ref=pd_sbs_sccl_3/135-6665135-6558261?pd_rd_w=dLrhk&pf_rd_p=4b6b5072-e9bd-4f30-a3af-a1f5d52978ec&pf_rd_r=TPKR7QFRFT4AP98YW95Q&pd_rd_r=a7eb3d0d-3879-43ad-9da8-ca87ffdbf2d1&pd_rd_wg=2JzUz&pd_rd_i=0399592520&psc=1">Dare to Lead: Brave Work. Tough Conversations. Whole Hearts. - Brené Brown</a>
+        <br>
+        <a href="https://www.amazon.com/Daring-Greatly-Courage-Vulnerable-Transforms/dp/1592408419/ref=pd_sbs_sccl_1/135-6665135-6558261?pd_rd_w=Wgo5C&pf_rd_p=4b6b5072-e9bd-4f30-a3af-a1f5d52978ec&pf_rd_r=RRG7QBQ0VTG91ANNBCXD&pd_rd_r=5ea5a4a8-3a88-42f6-8438-6e78d229bea7&pd_rd_wg=gze3m&pd_rd_i=1592408419&psc=1">Daring Greatly: How the Courage to Be Vulnerable Transforms the Way We Live, Love, Parent, and Lead - Brené Brown</a>
+    </p>
+    
+    <h3>
         <b>Behavioral Economics:</b>  
     </h3>
     <p>
@@ -38,11 +49,21 @@
         <a href="https://www.amazon.com/Freakonomics-Economist-Explores-Hidden-Everything/dp/0060731338">Freakonomics: A Rogue Economist Explores the Hidden Side of Everything - Steven Levitt</a>
     </p> 
     
+    <h3>
+        <b>Productivity:</b>  
+    </h3>
+
+    <p>
+        <a href="https://www.amazon.com/Atomic-Habits-Proven-Build-Break/dp/0735211299/ref=pd_sbs_sccl_30/135-6665135-6558261?pd_rd_w=6OFwk&pf_rd_p=4b6b5072-e9bd-4f30-a3af-a1f5d52978ec&pf_rd_r=V1ZRZGCYS745RM0JT42W&pd_rd_r=bdd2d7f0-bbf3-4e07-99dd-5245f20d81c2&pd_rd_wg=vEt6g&pd_rd_i=0735211299&psc=1">Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones - James Clear</a>
+    </p>
+
     </body>
    
     <footer style = "font-size: 16px; color: white; text-align: center; background-color:rgb(0, 217, 255)">
+        <i> 
         Connect with me on <a href="https://www.linkedin.com/in/hollyrobillard/"> LinkedIn</a>!
         <br>
         Connect with me on <a href="https://github.com/hollyrobillard"> Github</a>!
+        </i>
     </footer>
 </html>

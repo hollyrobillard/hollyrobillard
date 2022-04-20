@@ -1,0 +1,588 @@
+CREATE TABLE PROJECT_SEMI_FINISHED_GOOD (
+MIX_NUMBER NUMBER(6,0) NOT NULL, 
+SFG_DESCRIPTION VARCHAR(30) NOT NULL, 
+CONSTRAINT PK_SFG PRIMARY KEY(MIX_NUMBER)
+);
+
+CREATE TABLE PROJECT_RAW_MATERIAL (	
+RM_COMMON_NAME VARCHAR(20) NOT NULL, 
+RM_FUNCTION VARCHAR(20), 
+CONSTRAINT RMCOMMONNAME_PK PRIMARY KEY(RM_COMMON_NAME)
+);
+
+CREATE TABLE PROJECT_PACKAGING_VENDOR (
+PACKAGING_VENDOR_NAME VARCHAR(20) NOT NULL, 
+ADDRESS VARCHAR(40), 
+COUNTRY VARCHAR(20), 
+CONSTRAINT PACKAGINGVENDORNAME_PK PRIMARY KEY(PACKAGING_VENDOR_NAME)
+);
+
+CREATE TABLE PROJECT_RAW_MATERIAL_VENDOR (
+RM_VENDOR_NAME VARCHAR(20) NOT NULL, 
+ADDRESS VARCHAR(40), 
+COUNTRY VARCHAR(20), 
+CONSTRAINT RMVENDORNAME_PK PRIMARY KEY(RM_VENDOR_NAME)
+);
+
+CREATE TABLE PROJECT_CONTAMINANT (	
+CAS_NUMBER NUMBER(10,0) NOT NULL, 
+INCI_NAME VARCHAR(20) NOT NULL, 
+CONSTRAINT CASNUMBER_PK PRIMARY KEY(CAS_NUMBER)
+);
+
+CREATE TABLE PROJECT_CUSTOMER (	
+CUSTOMER_ID VARCHAR(6) NOT NULL, 
+FIRST_NAME VARCHAR(20) NOT NULL, 
+LAST_NAME VARCHAR(20) NOT NULL, 
+ADDRESS VARCHAR(40) NOT NULL, 
+COUNTRY VARCHAR(20) NOT NULL, 
+CONSTRAINT CUSTOMER_ID_PK PRIMARY KEY(CUSTOMER_ID)
+);
+
+CREATE TABLE PROJECT_PACKAGING_COMPONENT (
+COMPONENT_CODE NUMBER(6,0) NOT NULL, 
+PACKAGING_VENDOR_NAME VARCHAR(20) NOT NULL, 
+COMPONENT_DESCRIPTION VARCHAR(20), 
+UNIT_COST NUMBER(4,2), 
+CONSTRAINT COMPONENTCODE_PK PRIMARY KEY(COMPONENT_CODE)
+);
+
+CREATE TABLE PROJECT_FINISHED_GOOD (	
+SKU NUMBER(6,0) NOT NULL, 
+FG_DESCRIPTION VARCHAR(30) NOT NULL, 
+MIX_NUMBER NUMBER(6,0) NOT NULL, 
+UNIT_PRICE NUMBER(4,2) NOT NULL, 
+CONSTRAINT PK_FG PRIMARY KEY(SKU)
+);
+
+CREATE TABLE PROJECT_SFG_USES (
+MIX_NUMBER NUMBER(6,0) NOT NULL ENABLE, 
+RM_COMMON_NAME VARCHAR(20) NOT NULL, 
+WEIGHT_PERCENT_INCLUSION NUMBER(4,2) NOT NULL, 
+CONSTRAINT SFGUSES_COMPOSITE_PK PRIMARY KEY(MIX_NUMBER, RM_COMMON_NAME)
+);
+
+CREATE TABLE PROJECT_RM_SUPPLIED_BY (
+RM_VENDOR_NAME VARCHAR(20) NOT NULL, 
+RM_COMMON_NAME VARCHAR(20) NOT NULL, 
+RM_TRADE_NAME VARCHAR(20), 
+UNIT_COST NUMBER(4,2), 
+CONSTRAINT RMSUPPLIEDBY_COMPOSITE_PK PRIMARY KEY(RM_VENDOR_NAME, RM_COMMON_NAME)
+);
+
+CREATE TABLE PROJECT_RM_CONTAINS (	
+CAS_NUMBER NUMBER(10,0) NOT NULL, 
+RM_COMMON_NAME VARCHAR(20) NOT NULL, 
+WEIGHT_PERCENT_INCLUSION NUMBER(4,2) NOT NULL, 
+CONSTRAINT RMCONTAINS_COMPOSITE_PK PRIMARY KEY (CAS_NUMBER, RM_COMMON_NAME)
+);
+
+CREATE TABLE PROJECT_FG_PACK_INCLUDES (	
+SKU NUMBER(6,0) NOT NULL, 
+COMPONENT_CODE NUMBER(6,0) NOT NULL, 
+QUANTITY NUMBER(*,0) NOT NULL, 
+CONSTRAINT FGPACKINCLUDES_COMPOSITE_PK PRIMARY KEY (SKU, COMPONENT_CODE)
+);
+
+CREATE TABLE PROJECT_CUSTOMER_ORDER (	
+ORDER_ID VARCHAR(6) NOT NULL, 
+CUSTOMER_ID VARCHAR(6) NOT NULL, 
+SKU NUMBER(6,0) NOT NULL, 
+QUANTITY NUMBER(*,0) NOT NULL ENABLE, 
+CONSTRAINT ORDERID_PK PRIMARY KEY (ORDER_ID)
+);
+
+ALTER TABLE PROJECT_PACKAGING_COMPONENT
+ADD CONSTRAINT PACKAGINGVENDORNAME_FK FOREIGN KEY(PACKAGING_VENDOR_NAME) REFERENCES PROJECT_PACKAGING_VENDOR(PACKAGING_VENDOR_NAME)
+;
+
+ALTER TABLE PROJECT_FINISHED_GOOD
+ADD CONSTRAINT MIX_NUMBER_FK FOREIGN KEY(MIX_NUMBER) REFERENCES PROJECT_SEMI_FINISHED_GOOD(MIX_NUMBER);
+
+ALTER TABLE PROJECT_SFG_USES
+ADD CONSTRAINT MIX_NUMBER_FK_ASSOCIATIVE FOREIGN KEY(MIX_NUMBER) REFERENCES PROJECT_SEMI_FINISHED_GOOD(MIX_NUMBER);
+
+ALTER TABLE PROJECT_SFG_USES
+ADD CONSTRAINT RM_COMMON_NAME_FK_ASSOCIATIVE FOREIGN KEY (RM_COMMON_NAME) REFERENCES PROJECT_RAW_MATERIAL(RM_COMMON_NAME);
+
+ALTER TABLE PROJECT_RM_SUPPLIED_BY
+ADD CONSTRAINT RMVENDORNAME_FK_ASSOCIATIVE FOREIGN KEY (RM_VENDOR_NAME) REFERENCES PROJECT_RAW_MATERIAL_VENDOR(RM_VENDOR_NAME);
+
+ALTER TABLE PROJECT_RM_SUPPLIED_BY
+ADD CONSTRAINT RMCOMMONNAME_FK_ASSOCIATIVE FOREIGN KEY (RM_COMMON_NAME) REFERENCES PROJECT_RAW_MATERIAL(RM_COMMON_NAME);
+
+ALTER TABLE PROJECT_RM_CONTAINS
+ADD CONSTRAINT CASNUMBER_FK_ASSOCIATIVE FOREIGN KEY (CAS_NUMBER) REFERENCES PROJECT_CONTAMINANT(CAS_NUMBER);
+
+ALTER TABLE PROJECT_RM_CONTAINS
+ADD CONSTRAINT RMCOMMONNAME_FK_ASSOCIATIVE2 FOREIGN KEY (RM_COMMON_NAME) REFERENCES PROJECT_RAW_MATERIAL(RM_COMMON_NAME);
+
+ALTER TABLE PROJECT_FG_PACK_INCLUDES
+ADD CONSTRAINT SKU_FK_ASSOCIATIVE FOREIGN KEY (SKU) REFERENCES PROJECT_FINISHED_GOOD(SKU); 
+
+ALTER TABLE PROJECT_FG_PACK_INCLUDES
+ADD CONSTRAINT COMPONENTCODE_FK FOREIGN KEY (COMPONENT_CODE) REFERENCES PROJECT_PACKAGING_COMPONENT(COMPONENT_CODE);
+
+ALTER TABLE PROJECT_CUSTOMER_ORDER
+ADD CONSTRAINT CUSTOMERID_FK FOREIGN KEY (CUSTOMER_ID) REFERENCES PROJECT_CUSTOMER(CUSTOMER_ID);
+
+ALTER TABLE PROJECT_CUSTOMER_ORDER
+ADD CONSTRAINT SKU_FK_ASSOCIATIVE2 FOREIGN KEY(SKU) REFERENCES PROJECT_FINISHED_GOOD(SKU);
+
+INSERT INTO project_contaminant
+VALUES (78706, 'Linalool');
+
+INSERT INTO project_contaminant
+VALUES (122996, 'Phenoxyethanol');
+
+INSERT INTO project_contaminant
+VALUES (5989275 , 'Limonene');
+
+INSERT INTO project_contaminant
+VALUES (106229, 'Citronellol');
+
+INSERT INTO project_contaminant
+VALUES (120514, 'Benyl Benzoate');
+
+INSERT INTO project_contaminant
+VALUES (105135, 'Anise Alcohol');
+
+INSERT INTO project_contaminant
+VALUES (5392405, 'Citral');
+
+INSERT INTO project_contaminant
+VALUES (106241, 'Geraniol');
+
+INSERT INTO project_contaminant
+VALUES (97541, 'Isoeugenol');
+
+INSERT INTO project_contaminant
+VALUES (4602840, 'Farnesol');
+
+INSERT INTO project_customer
+VALUES ('DS0001', 'Dave', 'Scheller', '27 Grove Street, Chicago, IL 60608', 'United States');
+
+INSERT INTO project_customer
+VALUES ('JW0006', 'Jean', 'Windham', '82 High Street, London E21 3NJ', 'United Kingdom');
+
+INSERT INTO project_customer
+VALUES ('TW0012', 'Thorsten', 'Weber', 'Holland Strasse 80, Niederneisen 65629', 'Germany');
+
+INSERT INTO project_customer
+VALUES ('JL0008', 'Jing', 'Lu', 'Tian Lin Shi Si Cun 74hao 202, Shanghai', 'China');
+
+INSERT INTO project_customer
+VALUES ('JS0007', 'Joe', 'Saunders', '445 Park Avenue, Galena, Maryland 21635', 'United States');
+
+INSERT INTO project_customer
+VALUES ('SS0001', 'Sutton', 'Smith', '77 Terra Road, Miami, Florida 33173', 'United States');
+
+INSERT INTO project_customer
+VALUES ('FP0003', 'Faith', 'Paul', '1137 Kings Court, Longview, Texas 75605', 'United States');
+
+INSERT INTO project_customer
+VALUES ('HM0001', 'Henry', 'Morris', '3 Alexander Road, Brighton, BN85 2OH', 'United Kingdom');
+
+INSERT INTO project_customer
+VALUES ('CS0017', 'Carlos', 'Sainz', 'Plaza Maior 24, Barceo, Salamanca 37215', 'Spain');
+
+INSERT INTO project_customer
+VALUES ('AK0003', 'Aneta', 'Kaszynski', 'ul. Kozia 26, Wroc?aw 54-104', 'Poland');
+
+INSERT INTO project_semi_finished_good
+VALUES ('668921', 'BULK - ER Velvet Body Mask');
+
+INSERT INTO project_semi_finished_good
+VALUES ('668933', 'BULK - Crabtree Body Lotion');
+
+INSERT INTO project_semi_finished_good
+VALUES ('668934', 'BULK - Crabtree Hand Lotion');
+
+INSERT INTO project_semi_finished_good
+VALUES ('668910', 'BULK - Lavender Shower Gel');
+
+INSERT INTO project_semi_finished_good
+VALUES ('668968', 'BULK - Evelyn Rose Lip Balm');
+
+INSERT INTO project_semi_finished_good
+VALUES ('668912', 'BULK - Citron Body Lotion');
+
+INSERT INTO project_semi_finished_good
+VALUES ('668947', 'BULK - Gardeners Lip Mask');
+
+INSERT INTO project_semi_finished_good
+VALUES ('668926', 'BULK - Evelyn Rose Face Mist');
+
+INSERT INTO project_semi_finished_good
+VALUES ('668936', 'BULK - Crabtree Face Foam');
+
+INSERT INTO project_semi_finished_good
+VALUES ('668998', 'BULK - Bali Body Balm');
+
+INSERT INTO project_finished_good
+VALUES ('644351', 'Evelyn Rose Body Mask 200mL', '668921', '34.00');
+
+INSERT INTO project_finished_good
+VALUES ('644365', 'Crabtree Body Lotion 250mL', '668933', '25.00');
+
+INSERT INTO project_finished_good
+VALUES ('644367', 'Crabtree Hand Lotion 50mL', '668934', '20.00');
+
+INSERT INTO project_finished_good
+VALUES ('644340', 'Cult Lavender Shower Gel 500mL', '668910', '25.00');
+
+INSERT INTO project_finished_good
+VALUES ('644387', 'Evelyn Rose Lip Balm 10mL', '668968', '25.00');
+
+INSERT INTO project_finished_good
+VALUES ('644346', 'Cult Citron Body Lotion 250mL', '668912', '25.00');
+
+INSERT INTO project_finished_good
+VALUES ('644397', 'The Gardeners Lip Mask 10g', '668947', '15.00');
+
+INSERT INTO project_finished_good
+VALUES ('644358', 'Evelyn Rose Face Mist 75mL', '668926', '20.00');
+
+INSERT INTO project_finished_good
+VALUES ('644370', 'Crabtree Face Foam 125mL', '668936', '17.00');
+
+INSERT INTO project_finished_good
+VALUES ('644385', 'Bali Body Balm 100mL', '668998', '37.00');
+
+INSERT INTO project_customer_order
+VALUES ('OAK010', 'AK0003', '644351', '2');
+
+INSERT INTO project_customer_order
+VALUES ('OHM002', 'HM0001', '644351', '3');
+
+INSERT INTO project_customer_order
+VALUES ('OTW011', 'JW0006', '644367', '1');
+
+INSERT INTO project_customer_order
+VALUES ('OJL001', 'JL0008', '644358', '1');
+
+INSERT INTO project_customer_order
+VALUES ('OSS027', 'SS0001', '644340', '4');
+
+INSERT INTO project_customer_order
+VALUES ('OFP009', 'FP0003', '644387', '2');
+
+INSERT INTO project_customer_order
+VALUES ('OFP010', 'FP0003', '644397', '3');
+
+INSERT INTO project_customer_order
+VALUES ('ODS003', 'DS0001', '644370', '6');
+
+INSERT INTO project_customer_order
+VALUES ('OTW001', 'TW0012', '644385', '2');
+
+INSERT INTO project_customer_order
+VALUES ('OCS027', 'CS0017', '644351', '2');
+
+INSERT INTO project_packaging_vendor
+VALUES ('SB Packaging', '84 Iron Street, Baldwin, New York 11510', 'United States');
+
+INSERT INTO project_packaging_vendor
+VALUES ('MavPak', '7 Sheffe Road, Hartselle, Alabama 35640', 'United States');
+
+INSERT INTO project_packaging_vendor
+VALUES ('United Pack', '86 East Fawn Street, York, ON M6C 2E9', 'Canada');
+
+INSERT INTO project_packaging_vendor
+VALUES ('Pack Design Corp', '57 Rose Ave, Smyrna, Georgia 30080', 'United States');
+
+INSERT INTO project_packaging_vendor
+VALUES ('Choice Components', 'ul. Daszyna 47, Daszyna 99-107', 'Poland');
+
+INSERT INTO project_packaging_vendor
+VALUES ('UniPack', 'Schoener 101, Lemmer 8531 AL', 'Netherlands');
+
+INSERT INTO project_packaging_vendor
+VALUES ('ABC Packing', '9193 Catherine Drive, Euless, TX 76039', 'United States');
+
+INSERT INTO project_packaging_vendor
+VALUES ('Premier Designs', '90 York Road, Oxborough PE33 1EA', 'United Kingdom');
+
+INSERT INTO project_packaging_vendor
+VALUES ('Fill Inc', '22 Newport Road, Carlton DN14 8RA', 'United Kingdom');
+
+INSERT INTO project_packaging_vendor
+VALUES ('PlasTech', 'Paharpur Business Centre, Delhi 110019', 'India');
+
+INSERT INTO project_packaging_component
+VALUES ('693555', 'PlasTech', '200mL Jar', '6.79');
+
+INSERT INTO project_packaging_component
+VALUES ('693528', 'ABC Packing', '100mL Wide Tube', '4.99');
+
+INSERT INTO project_packaging_component
+VALUES ('693541', 'UniPack', 'Generic Cap', '2.35');
+
+INSERT INTO project_packaging_component
+VALUES ('693543', 'Premier Designs', '250mL Glass Bottle', '7.47');
+
+INSERT INTO project_packaging_component
+VALUES ('693538', 'MavPak', '10mL Tube', '3.10');
+
+INSERT INTO project_packaging_component
+VALUES ('693510', 'Pack Design Corp', 'Medium Shive w Tab', '1.16');
+
+INSERT INTO project_packaging_component
+VALUES ('693539', 'Fill Inc', 'Flip Cap Small', '2.01');
+
+INSERT INTO project_packaging_component
+VALUES ('693532', 'Choice Components', '10g Sample Tube', '1.85');
+
+INSERT INTO project_packaging_component
+VALUES ('693527', 'SB Packaging', 'Flip Cap Large', '4.23');
+
+INSERT INTO project_packaging_component
+VALUES ('693556', 'United Pack', '100mL Jar', '5.65');
+
+INSERT INTO project_fg_pack_includes
+VALUES ('644351', '693555', '1');
+
+INSERT INTO project_fg_pack_includes
+VALUES ('644365', '693543', '1');
+
+INSERT INTO project_fg_pack_includes
+VALUES ('644367', '693541', '1');
+
+INSERT INTO project_fg_pack_includes
+VALUES ('644387', '693538', '1');
+
+INSERT INTO project_fg_pack_includes
+VALUES ('644346', '693543', '1');
+
+INSERT INTO project_fg_pack_includes
+VALUES ('644397', '693532', '1');
+
+INSERT INTO project_fg_pack_includes
+VALUES ('644358', '693539', '1');
+
+INSERT INTO project_fg_pack_includes
+VALUES ('644370', '693527', '1');
+
+INSERT INTO project_fg_pack_includes
+VALUES ('644385', '693528', '1');
+
+INSERT INTO project_fg_pack_includes
+VALUES ('644351', '693510', '1');
+
+INSERT INTO project_raw_material_vendor
+VALUES ('Dow Chemical', '24 E Grant St, Elizabeth, Colorado 80107', 'United States');
+
+INSERT INTO project_raw_material_vendor
+VALUES ('Pride Chemical', '108 B Rr 2, Homerville, Georgia 31634', 'United States');
+
+INSERT INTO project_raw_material_vendor
+VALUES ('Maroon Group', '40 Burkshire St, Corbin, Kentucky 40701', 'United States');
+
+INSERT INTO project_raw_material_vendor
+VALUES ('Caribbean Naturals', '27 Marl St, Oak Park, Michigan 48237', 'United States');
+
+INSERT INTO project_raw_material_vendor
+VALUES ('Evonnik', '4 West St, Stoneham, Massachusetts 02180', 'United States');
+
+INSERT INTO project_raw_material_vendor
+VALUES ('Rossow', '2655 Leemount St, Salem, Virginia 24153', 'United States');
+
+INSERT INTO project_raw_material_vendor
+VALUES ('Solvay', '9 Song Rd, Williamsville, Missouri 63967', 'United States');
+
+INSERT INTO project_raw_material_vendor
+VALUES ('Givaudan', '41 Commerce St, Gainesville, Texas 76240', 'United States');
+
+INSERT INTO project_raw_material_vendor
+VALUES ('Beraca', '13 Inter Rd, New Gloucester, Maine 04260', 'United States');
+
+INSERT INTO project_raw_material_vendor
+VALUES ('Elementis', '30 Elmwood Ct, Hewitt, New Jersey 07421', 'United States');
+
+INSERT INTO project_raw_material
+VALUES ('Citron Fragrance', 'Fragrance');
+
+INSERT INTO project_raw_material
+VALUES ('Glycerin', 'Solvent');
+
+INSERT INTO project_raw_material
+VALUES ('Lavender Extract', 'Essential Oil');
+
+INSERT INTO project_raw_material
+VALUES ('Lemongrass Oil', 'Essential Oil');
+
+INSERT INTO project_raw_material
+VALUES ('Cetearyl Alcohol', 'Emulsifier');
+
+INSERT INTO project_raw_material
+VALUES ('Shea Butter', 'Moisturizer');
+
+INSERT INTO project_raw_material
+VALUES ('Phenoxyethanol Blend', 'Preservative');
+
+INSERT INTO project_raw_material
+VALUES ('Ylang Ylang Oil', 'Essential Oil');
+
+INSERT INTO project_raw_material
+VALUES ('Rose Hip Oil', 'Essential Oil');
+
+INSERT INTO project_raw_material
+VALUES ('SLES', 'Surfactant');
+
+INSERT INTO project_rm_supplied_by
+VALUES ('Dow Chemical', 'Glycerin', 'Glycerin - Palm Free', '1.75');
+
+INSERT INTO project_rm_supplied_by
+VALUES ('Maroon Group', 'Ylang Ylang Oil', 'Ylang Ylang Oil III', '34.55');
+
+INSERT INTO project_rm_supplied_by
+VALUES ('Caribbean Naturals', 'Rose Hip Oil', 'Rose hip oil unref.', '51.63');
+
+INSERT INTO project_rm_supplied_by
+VALUES ('Solvay', 'SLES', 'Sulfochem ES-2DX-BZ', '8.00');
+
+INSERT INTO project_rm_supplied_by
+VALUES ('Elementis', 'Lavender Extract', 'Lavender Extract GLW', '47.08');
+
+INSERT INTO project_rm_supplied_by
+VALUES ('Givaudan', 'Citron Fragrance', 'Citron Fragrance', '40.25');
+
+INSERT INTO project_rm_supplied_by
+VALUES ('Beraca', 'Lemongrass Oil', 'Lemongrass Oil Organ', '44.21');
+
+INSERT INTO project_rm_supplied_by
+VALUES ('Maroon Group', 'Phenoxyethanol Blend', 'Euxyl PE 9010', '21.99');
+
+INSERT INTO project_rm_supplied_by
+VALUES ('Pride Chemical', 'Cetearyl Alcohol', 'Crodacol 1618', '4.77');
+
+INSERT INTO project_rm_supplied_by
+VALUES ('Caribbean Naturals', 'Shea Butter', 'Natural Shea Butter', '34.58');
+
+INSERT INTO project_rm_contains
+VALUES (106229, 'Rose Hip Oil', '0.01');
+
+INSERT INTO project_rm_contains
+VALUES (106241, 'Citron Fragrance', '0.02');
+
+INSERT INTO project_rm_contains
+VALUES (106229, 'Citron Fragrance', '0.05');
+
+INSERT INTO project_rm_contains
+VALUES (120514, 'Lavender Extract', '0.02');
+
+INSERT INTO project_rm_contains
+VALUES (106241, 'Rose Hip Oil', '0.03');
+
+INSERT INTO project_rm_contains
+VALUES (5989275, 'Lemongrass Oil', '0.12');
+
+INSERT INTO project_rm_contains
+VALUES (122996, 'Phenoxyethanol Blend', '0.20');
+
+INSERT INTO project_rm_contains
+VALUES (5392405, 'Citron Fragrance', '0.04');
+
+INSERT INTO project_rm_contains
+VALUES (120514, 'Ylang Ylang Oil', '0.06');
+
+INSERT INTO project_rm_contains
+VALUES (122996, 'Ylang Ylang Oil', '0.05');
+
+INSERT INTO project_sfg_uses
+VALUES (668912, 'Citron Fragrance', '1.00');
+
+INSERT INTO project_sfg_uses
+VALUES (668947, 'Glycerin', '20.50');
+
+INSERT INTO project_sfg_uses
+VALUES (668910, 'Lavender Extract', '5.00');
+
+INSERT INTO project_sfg_uses
+VALUES (668998, 'Lemongrass Oil', '5.25');
+
+INSERT INTO project_sfg_uses
+VALUES (668933, 'Cetearyl Alcohol', '8.75');
+
+INSERT INTO project_sfg_uses
+VALUES (668934, 'Shea Butter', '10.00');
+
+INSERT INTO project_sfg_uses
+VALUES (668947, 'Phenoxyethanol Blend', '1.2');
+
+INSERT INTO project_sfg_uses
+VALUES (668998, 'Ylang Ylang Oil', '2.00');
+
+INSERT INTO project_sfg_uses
+VALUES (668926, 'Rose Hip Oil', '2.00');
+
+INSERT INTO project_sfg_uses
+VALUES (668936, 'SLES', '12.00');
+
+SELECT fg.fg_description,  pc.component_description
+FROM project_packaging_component pc
+JOIN project_fg_pack_includes fgic
+ON pc.component_code = fgic.component_code
+JOIN project_finished_good fg
+ON fgic.sku = fg.sku
+WHERE pc.component_description Like '%Tube%'
+;
+
+SELECT cu.country, SUM(o.quantity) AS "Number of Orders", 
+  (CASE WHEN SUM(o.quantity) >2 THEN 'Primary'
+        ELSE 'Secondary' END) "Market Priority"
+FROM project_customer_order o
+JOIN project_customer cu
+ON o.customer_id = cu.customer_id
+GROUP BY cu.country
+ORDER BY SUM(o.quantity) DESC
+;
+
+SELECT co.inci_name, sfg.mix_number, sfg.sfg_description, fg.fg_description, rm.rm_common_name, rmc.weight_percent_inclusion
+FROM project_contaminant co
+JOIN project_rm_contains rmc
+ON co.cas_number=rmc.cas_number
+JOIN project_raw_material rm
+ON rmc.rm_common_name = rm.rm_common_name
+JOIN project_sfg_uses sfgu
+ON rm.rm_common_name = sfgu.rm_common_name
+JOIN project_semi_finished_good sfg
+ON sfgu.mix_number = sfg.mix_number
+JOIN project_finished_good fg
+ON sfg.mix_number = fg.mix_number
+WHERE co.inci_name = 'Geraniol'
+;
+
+SELECT sfg.mix_number, sfg.sfg_description, co.inci_name, rmc.weight_percent_inclusion
+FROM project_contaminant co
+JOIN project_rm_contains rmc
+ON co.cas_number=rmc.cas_number
+JOIN project_raw_material rm
+ON rmc.rm_common_name = rm.rm_common_name
+JOIN project_sfg_uses sfgu
+ON rm.rm_common_name = sfgu.rm_common_name
+JOIN project_semi_finished_good sfg
+ON sfgu.mix_number = sfg.mix_number
+WHERE co.inci_name = 'Phenoxyethanol'
+AND rmc.weight_percent_inclusion > .01
+;
+
+SELECT cu.first_name || ' ' || cu.last_name AS "Customer Name", fg.fg_description, rm.rm_common_name, cu.country
+FROM project_raw_material rm
+JOIN project_sfg_uses sfgu
+ON rm.rm_common_name = sfgu.rm_common_name
+JOIN project_semi_finished_good sfg
+ON sfgu.mix_number = sfg.mix_number
+JOIN project_finished_good fg
+ON sfg.mix_number = fg.mix_number
+JOIN project_customer_order o
+ON fg.sku = o.sku
+JOIN project_customer cu
+ON o.customer_id = cu.customer_id
+WHERE rm.rm_common_name = 'Lavender Extract'
+AND cu.country NOT IN (
+                       SELECT cu.country
+                       FROM project_customer cu
+                       WHERE cu.country = 'United Kingdom'
+                      )
+;

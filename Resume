@@ -1,158 +1,169 @@
-<html>
-    <h1 style = "text-align: center; font-size: 30px; font-family: Arial, Helvetica, sans-serif ; color: white; background-color: rgb(58, 184, 189);">
-            Holly Ann Robillard
-            <br>
-            <font style = "font-size: 15px">
-            h.ann.robillard@gmail.com
-            <br>
-            <a href="https://www.linkedin.com/in/hollyrobillard/">https://www.linkedin.com/in/hollyrobillard/</a>
-            </font>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holly Robillard's Resume</title>
+    
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif; 
+        }
+        h1 {
+            text-align: center;
+            font-size: 30px; 
+            color: white; 
+            text-shadow: 1px 1px black;
+            background-color:rgb(58, 184, 189);
+        }
+        .subheader {
+            font-size: 15px;
+            text-shadow: none;
+        }
+        h2 {
+            font-size: 20px;
+            text-shadow: 1px 1px rgb(58, 184, 189);
+        }
+        .position {
+            font-style: italic;
+        }
+        footer {
+            text-align: center; 
+            font-size: 20px; 
+            color: white; 
+            background-color:
+            rgb(58, 184, 189);
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Holly Ann Robillard
+        <br>
+        <div class = "subheader">
+        h.ann.robillard@gmail.com
+        <br>
+        <a href="https://www.linkedin.com/in/hollyrobillard/">https://www.linkedin.com/in/hollyrobillard/</a>
+        </div>
     </h1>
 
-        <h2> 
-            Education & Certifications
-        </h2>		
+    <h2> 
+        Education & Certifications
+    </h2>		
 
-        <p>
-            Master of Business Administration - University of Connecticut, Hartford, CT 06103
-            <br>
-            Concentrations: Management, Business Analytics
-            <br>
-            <br>
-            Chemical Engineering, B.S.E. - University of Connecticut, Storrs, CT, 06269
-            <br>
-            Minors: Food Science, Engineering Management, Mathematics, Additional: Chemistry, Materials Science & Engineering
-            <br>
-            <br>
-            Project Management Professional (PMP), Certified Associate in Project Management (CAPM), ASQ Certified Six Sigma Green Belt
+    <p>
+        Master of Business Administration - University of Connecticut, Hartford, CT 06103
+        <br>
+        Concentrations: Management, Business Analytics
+        <br>
+        <br>
+        Chemical Engineering, B.S.E. - University of Connecticut, Storrs, CT, 06269
+        <br>
+        Minors: Food Science, Engineering Management, Mathematics, Additional: Chemistry, Materials Science & Engineering
+        <br>
+        <br>
+        Project Management Professional (PMP), Certified Associate in Project Management (CAPM), ASQ Certified Six Sigma Green Belt
         </p>
 
-        <h2>
-            Relevant Work Experience
-        </h2>
+    <h2>
+        Relevant Work Experience
+    </h2>
 
-        <p>
-            <b>Quality and Process Manager, Dandy, New York City, NY 10001</b>
-            <br>
-            * Develops, manages, and executes strategic quality, including novel data solutions, and regulatory initiatives internally and with partner dental laboratories to drive continuous improvement and compliance with federal and state regulations.
-            <br>
-            * Conducts data and root cause analysis (CAPAs) and communicates findings to internal and external management stakeholders on refabrication and nonconformance metrics to drive process control through clear fault attribution and reduction of manufacturing variance in highly customized, manually fabricated removable dental appliances.
-            <br>
-            * Proactively authoring a QMS reflective of the proposed changes to 21 CFR 820.
-        </p>
+    <p class="workExperience">
+        <b class = "position">Quality and Process Manager, Dandy, New York City, NY 10001</b>
+        <ul>
+        <li>Develops, manages, and executes strategic quality, including novel data solutions, and regulatory initiatives internally and with partner dental laboratories to drive continuous improvement and compliance with federal and state regulations.</li>
+        <li>Conducts data and root cause analysis (CAPAs) and communicates findings to internal and external management stakeholders on refabrication and nonconformance metrics to drive process control through clear fault attribution and reduction of manufacturing variance in highly customized, manually fabricated removable dental appliances.</li>
+        <li>Proactively authoring a QMS reflective of the proposed changes to 21 CFR 820.</li>
+        </ul>
+        <b class = "position">Project Manager, BARK, New York City, NY 10013</b>
+        <ul>
+        <li>Managed information systems and data analytics projects and programs involving cross-functional teams including external partners.</li>
+        <li>Implemented a change management process and creating primary and supplemental documentation for an updated project management process and governance expectations (OPAs).</li>
+        <li>Led project management training initiatives across the company, including delivering training via recorded and interactive virtual courses.</li>
+        <li>Noteworthy projects/programs: new fulfillment center (including facility construction, ramping to 50% subscription volume), external integrations for HRIS transition, machine learning process optimizations for upselling, NetSuite process optimizations for WIP.</li>
+        </ul>   
+        <b class = "position">Quality Manager and Regulatory Specialist, Crabtree & Evelyn, Limited, Boston, MA 02116</b>
+        <ul>
+        <li>Rebuilt, led, and drove continuous improvement of QMS, including vendor relations.</li>
+        <li>Led vendor audits, mock recalls, and quality aspects of vendor scorecards.</li>
+        <li>Led CAPAs, non-conformance management, and customer inquiries/complaints.</li>
+        <li>Created and oversaw quality database to maintain quality assurance and quality control record accuracy.</li>
+        <li>Oversaw regulation review, led product testing, and supported global product registrations for new products and change management initiatives.</li>
+        <li>Led cross-functional teams to resolve compliance-related technical challenges.</li>
+        <li>Built and managed the regulatory database as well as its interface with SAP to ensures all safety, regulatory, and quality information is accurately filed, easily accessible, and optimized to support critical business decisions.</li>
+        </ul>
+        <b class = "position">Project Management Engineer, BioSafe Systems LLC, East Hartford, CT 06108</b>
+        <ul>
+        <li>Created and implemented a new project management stage gate system including the creation of OPAs.</li> 
+        <li>Managed project lifecycles and owned project timelines for all new product development projects, product improvement projects, and international projects including all stakeholder communication (approximately 50 projects).</li>
+        <li>Developed new process instructions, coordinated production trials, and advised on capital equipment installs.</li>
+        <li>Conducted competitive and costs analyses used to lead discussions on product pricing and master label development.</li>
+        </ul>
+        <b class = "position">Process Engineer, Henkel Corporation, Trumbull, CT 06611</b>
+        <ul>
+        <li>Developed and deployed new formulations for laundry care - liquid laundry and unit dose detergent.</li>
+        <li>Led rapid, agile process development on 3 new surfactant chasses for retail brands while minimizing processing COGs.</li>
+        <li>Applied project management techniques to successfully develop and launch new intermediate product blends at new co-manufacturing sites and to scope and install new process equipment at internal manufacturing sites.</li>
+        <li>Developed 5 new process technologies and new product formats that have become utility patents and trade secrets.</li> 
+        </ul>
+        <b class = "position">Associate Process Engineer and Formulation Chemist, Unilever, Trumbull, CT 0661</b>
+        <ul>
+        <li>Developed and deployed new formulations for hair care - shampoos, conditioners, styling aids, and aerosols.</li> 
+        <li>Reformulated existing surfactant chassis for significant cost savings and right first time quality improvement (up to 800%) while maintaining consumer likeability as demonstrated through salon testing.</li>
+        <li>Analyzed call center and online consumer complaints in the hair category, made formulation and manufacturing recommendations to the quality team, implemented solutions, and tracked improvement results (reduction in complaints of up to 1 million calls annually).</li> 
+        </ul>
+    </p>
 
-        <p>
-            <b>Project Manager, BARK, New York City, NY 10013</b>
-            <br>
-            * Managed information systems and data analytics projects and programs involving cross-functional teams including external partners.
-           <br>
-            * Implemented a change management process and creating primary and supplemental documentation for an updated project management process and governance expectations (OPAs).
-           <br>
-            * Led project management training initiatives across the company, including delivering training via recorded and interactive virtual courses.
-            <br>
-            * Noteworthy projects/programs: new fulfillment center (including facility construction, ramping to 50% subscription volume), external integrations for HRIS transition, machine learning process optimizations for upselling, NetSuite process optimizations for WIP.
-        </p>
+    <h2>
+        Patents
+    </h2>
 
-        <p>        
-            <b>Quality Manager and Regulatory Specialist, Crabtree & Evelyn, Limited, Boston, MA 02116</b>
-            <br>
-            * Rebuilt, led, and drove continuous improvement of QMS, including vendor relations.
-            <br>
-            * Led vendor audits, mock recalls, and quality aspects of vendor scorecards.
-            <br>
-            * Led CAPAs, non-conformance management, and customer inquiries/complaints.
-            <br>
-            * Created and oversaw quality database to maintain quality assurance and quality control record accuracy.
-            <br>
-            * Oversaw regulation review, led product testing, and supported global product registrations for new products and change management initiatives.
-            <br>
-            * Led cross-functional teams to resolve compliance-related technical challenges.
-            <br>
-            * Built and managed the regulatory database as well as its interface with SAP to ensures all safety, regulatory, and quality information is accurately filed, easily accessible, and optimized to support critical business decisions.
-        </p>
+    <p>
+        <b>Unit Dose Packs With Non-Water Soluble Covers</b>
+        <br>
+        Patent number: <a href="https://patents.justia.com/patent/11268053">11268053</a>
+        <br>
+        <b>2-in-1 Unit Dose Providing Softening And Detergency</b>
+        <br>
+        Patent number: <a href="https://patents.justia.com/patent/11046922">11046922</a>
+    </p>
 
-        <p>
-            <b>Project Management Engineer, BioSafe Systems LLC, East Hartford, CT 06108</b>
-            <br>
-            * Created and implemented a new project management stage gate system including the creation of OPAs.
-            </b>
-            * Managed project lifecycles and owned project timelines for all new product development projects, product improvement projects, and international projects including all stakeholder communication (approximately 50 projects).
-            </b>
-            * Developed new process instructions, coordinated production trials, and advised on capital equipment installs.
-            </b>
-            * Conducted competitive and costs analyses used to lead discussions on product pricing and master label development.
-        </p>
+    <h2>
+        Other Publications
+    </h2>
 
-        <p>
-            <b>Process Engineer, Henkel Corporation, Trumbull, CT 06611</b>
-            <br>
-            * Developed and deployed new formulations for laundry care - liquid laundry and unit dose detergent.
-            <br>
-            * Led rapid, agile process development on 3 new surfactant chasses for retail brands while minimizing processing COGs.
-            <br>
-            * Applied project management techniques to successfully develop and launch new intermediate product blends at new co-manufacturing sites and to scope and install new process equipment at internal manufacturing sites. 
-            <br>
-            * Developed 5 new process technologies and new product formats that have become utility patents and trade secrets.
-        </p>
+    <p>
+        <b>pH Sensitivity of Ion Exchange through a Thin Film Composite Membrane in Forward Osmosis</b>
+        <br>
+        Environmental Science & Technology Letters · Jun 26, 2015
+        <br>
+        <b>Importance of Educating and Mentoring High School Students on the Selection of the Chemical Engineering Bachelor's Degree</b> 
+        <br>
+        AIChE · Nov 20, 2014
+        <br>
+        <b>A Deeper Understanding of Technology is Needed for Workforce Readiness - Playing Games, Texting, and Tweets Aren’t Enough to Make Students Tech-Savvy</b>
+        <br>
+        ASEE Conference · Apr 4, 2014
+    </p>
 
-         <p>
-            <b>Associate Process Engineer and Formulation Chemist, Unilever, Trumbull, CT 0661</b>
-            <br>
-            * Developed and deployed new formulations for hair care - shampoos, conditioners, styling aids, and aerosols.
-            <br>
-            * Reformulated existing surfactant chassis for significant cost savings and right first time quality improvement (up to 800%) while maintaining consumer likeability as demonstrated through salon testing.
-            <br>
-            * Analyzed call center and online consumer complaints in the hair category, made formulation and manufacturing recommendations to the quality team, implemented solutions, and tracked improvement results (reduction in complaints of up to 1 million calls annually).
-        </p>
-
-        <h2>
-            Patents
-        </h2>
-
-        <p>
-            <b>Unit Dose Packs With Non-Water Soluble Covers</b>
-            <br>
-            Patent number: <a href="https://patents.justia.com/patent/11268053">11268053</a>
-            <br>
-            <b>2-in-1 Unit Dose Providing Softening And Detergency</b>
-            <br>
-            Patent number: <a href="https://patents.justia.com/patent/11046922">11046922</a>
-        </p>
-
-        <h2>
-            Other Publications
-        </h2>
-
-        <p>
-            <b>pH Sensitivity of Ion Exchange through a Thin Film Composite Membrane in Forward Osmosis</b>
-            <br>
-            Environmental Science & Technology Letters · Jun 26, 2015
-            <br>
-            <b>Importance of Educating and Mentoring High School Students on the Selection of the Chemical Engineering Bachelor's Degree</b> 
-            <br>
-            AIChE · Nov 20, 2014
-            <br>
-            <b>A Deeper Understanding of Technology is Needed for Workforce Readiness - Playing Games, Texting, and Tweets Aren’t Enough to Make Students Tech-Savvy</b>
-            <br>
-            ASEE Conference · Apr 4, 2014
-        </p>
-
-        <h2>
-            Features
-        </h2>
+    <h2>
+        Features
+    </h2>
         
-        <p>
-            <img src="https://pbs.twimg.com/media/EGDKcV_XYAAA1pt?format=jpg&name=360x360" alt="">
-            <img src="https://pbs.twimg.com/media/EGDKckOWsAM99wb?format=jpg&name=360x360" alt="">
-            <br>
-            <a href="https://twitter.com/henkel_na/status/1180165695595778048">Feature on Henkel North America Twitter</a>
-            <br>
-            <br>
-            <a href="https://www.aiche.org/chenected/2016/01/meet-holly-robillard-featured-student-february-2016">Feature on American Institute of Chemical Engineers Site</a>
-        </p>
+    <p>
+        <img src="https://pbs.twimg.com/media/EGDKcV_XYAAA1pt?format=jpg&name=360x360" alt="">
+        <img src="https://pbs.twimg.com/media/EGDKckOWsAM99wb?format=jpg&name=360x360" alt="">
+        <br>
+        <a href="https://twitter.com/henkel_na/status/1180165695595778048">Feature on Henkel North America Twitter</a>
+        <br>
+        <br>
+        <a href="https://www.aiche.org/chenected/2016/01/meet-holly-robillard-featured-student-february-2016">Feature on American Institute of Chemical Engineers Site</a>
+    </p>
 
-        <footer style = "text-align: center; font-size: 20px; font-family: Arial, Helvetica, sans-serif; color: white; background-color: rgb(58, 184, 189);">
-            I look forward to connecting with you!
-        </footer>
-
+    <footer>
+        I look forward to connecting with you!
+    </footer>
+</body>
 </html>

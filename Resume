@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Holly Robillard's Resume</title>
+    <title>👩🏼‍💻 Holly Robillard's Resume 👩🏼‍💻</title>
     
     <style>
         body {
@@ -16,10 +16,14 @@
             color: white; 
             text-shadow: 1px 1px black;
             background-color:rgb(58, 184, 189);
+            padding: 10px;
         }
         .subheader {
             font-size: 15px;
             text-shadow: none;
+        }
+        .linkedin {
+            color: black;
         }
         h2 {
             font-size: 20px;
@@ -28,12 +32,48 @@
         .position {
             font-style: italic;
         }
+        ul {
+            list-style: none;
+        }
+        li::before {
+            content: "•"; 
+            color: rgb(58, 184, 189);
+            display: inline-block; 
+            width: 1em;
+            margin-left: -1em
+        }
+        p {
+            padding-left: 20px;
+        }
+        img {
+            border: 2px ridge rgb(58, 184, 189);
+            border-radius: 10px;
+            margin: 0 10px 0 0;
+        }
+        .link {
+            color: rgb(58, 184, 189);
+        }
+        .link:hover {
+            color: black;
+            cursor: pointer;
+        }
+        .footerLink {
+            color: rgb(58, 184, 189);
+            padding: 0 0 10px 0;
+        }
+        .footerLink:hover {
+            color: black;
+            cursor: pointer;
+        }
         footer {
             text-align: center; 
             font-size: 20px; 
             color: white; 
-            background-color:
-            rgb(58, 184, 189);
+            text-shadow: 1px 1px black;
+            font-style: italic;
+            background-color:rgb(58, 184, 189);
+            padding: 10px;
+            margin: 15px 0 0 0;
         }
     </style>
 </head>
@@ -44,7 +84,7 @@
         <div class = "subheader">
         h.ann.robillard@gmail.com
         <br>
-        <a href="https://www.linkedin.com/in/hollyrobillard/">https://www.linkedin.com/in/hollyrobillard/</a>
+        <a class = "linkedin" href="https://www.linkedin.com/in/hollyrobillard/">https://www.linkedin.com/in/hollyrobillard/</a>
         </div>
     </h1>
 
@@ -123,11 +163,12 @@
     <p>
         <b>Unit Dose Packs With Non-Water Soluble Covers</b>
         <br>
-        Patent number: <a href="https://patents.justia.com/patent/11268053">11268053</a>
+        Patent number: <a class = "link" href="https://patents.justia.com/patent/11268053">11268053</a>
+        <br>
         <br>
         <b>2-in-1 Unit Dose Providing Softening And Detergency</b>
         <br>
-        Patent number: <a href="https://patents.justia.com/patent/11046922">11046922</a>
+        Patent number: <a class = "link" href="https://patents.justia.com/patent/11046922">11046922</a>
     </p>
 
     <h2>
@@ -139,9 +180,11 @@
         <br>
         Environmental Science & Technology Letters · Jun 26, 2015
         <br>
+        <br>
         <b>Importance of Educating and Mentoring High School Students on the Selection of the Chemical Engineering Bachelor's Degree</b> 
         <br>
         AIChE · Nov 20, 2014
+        <br>
         <br>
         <b>A Deeper Understanding of Technology is Needed for Workforce Readiness - Playing Games, Texting, and Tweets Aren’t Enough to Make Students Tech-Savvy</b>
         <br>
@@ -152,18 +195,22 @@
         Features
     </h2>
         
-    <p>
-        <img src="https://pbs.twimg.com/media/EGDKcV_XYAAA1pt?format=jpg&name=360x360" alt="">
-        <img src="https://pbs.twimg.com/media/EGDKckOWsAM99wb?format=jpg&name=360x360" alt="">
-        <br>
-        <a href="https://twitter.com/henkel_na/status/1180165695595778048">Feature on Henkel North America Twitter</a>
-        <br>
-        <br>
-        <a href="https://www.aiche.org/chenected/2016/01/meet-holly-robillard-featured-student-february-2016">Feature on American Institute of Chemical Engineers Site</a>
-    </p>
+    <img src="https://pbs.twimg.com/media/EGDKcV_XYAAA1pt?format=jpg&name=360x360" alt="">
+    <img src="https://pbs.twimg.com/media/EGDKckOWsAM99wb?format=jpg&name=360x360" alt="">
+    <br>
+    <br>
+    <a class = "footerLink" href="https://twitter.com/henkel_na/status/1180165695595778048">Feature on Henkel North America Twitter</a>
+    <br>
+    <br>
+    <a class = "footerLink" href="https://www.aiche.org/chenected/2016/01/meet-holly-robillard-featured-student-february-2016">Feature on American Institute of Chemical Engineers Site</a>
+    <br>
 
     <footer>
         I look forward to connecting with you!
     </footer>
 </body>
+<script>
+    let name = prompt("Hello! 👋🏻 It's wonderful to virtually meet you! 😊 In order to get to know you better, what is your first name?");
+    alert(`Thank you, ${name}! The page I'm about to bring you to is Holly Robillard's resume. If you have any questions, please email Holly at h.ann.robillard@gmail.com.`);
+</script>
 </html>

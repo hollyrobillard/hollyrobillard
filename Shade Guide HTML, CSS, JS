@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quality Control Quick Reference</title>
+    <style>
+      .header {
+        text-align: center;
+        margin: 0px auto 20px auto;
+        line-height: 50px;
+        font-size: 15px;
+        color: white;
+        background: linear-gradient(rgb(15, 15, 170), rgb(167, 207, 230));
+      }
+      .colorBackground {
+        background: radial-gradient(white 80%, grey 20%);
+      }
+      .content {
+        display: block;
+        margin: 0 auto;
+        padding: 100px 60px 30px 60px;
+        border: 10px 10px;
+        text-align: center;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/034/240/original/Tooth.png?1652466438);
+        background-size: 750px 900px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-origin: padding-box;
+      }
+      h1 {
+        color: white;
+      }
+      h2 {
+        color: white;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        color: rgb(15, 15, 170);
+        background-color: white;
+        border-color: rgb(15, 15, 170);
+        font-style: italic;
+        font-weight: bold;
+        font-size: medium;
+        border-radius: 4px;
+        padding: 20px 30px;
+        box-shadow: 4px 4px rgb(167, 207, 230);
+        transition: all 200ms ease-in-out;
+      }
+      button:hover {
+        color: white;
+        background: rgb(15, 15, 170);
+      }
+      .colorHolder {
+        width: 300px;
+        display: block;
+        margin: 0 auto;
+      }
+      p {
+        color: rgb(15, 15, 170);
+        margin: 20px auto 140px auto;
+        width: 180px;
+      }
+      .footer {
+        text-align: center;
+        margin: 0px auto 20px auto;
+        line-height: 40px;
+        color: white;
+        background: linear-gradient(rgb(167, 207, 230), rgb(15, 15, 170));
+      }
+      .disclaimer {
+        display: block;
+        margin: 0 auto;
+        font-size: 10px;
+        line-height: 30px;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">LabOps Quality Assurance and Control</div>
+    <hr />
+    <br />
+    <br />
+    <br />
+    <div class="colorBackground">
+      <span class="content">
+        <h1>Quality Control Shade Quick Reference</h1>
+        <button>Change Product Type</button>
+        <br />
+        <br />
+        <h2>Selected Product Name Will Display Here</h2>
+        <br />
+        <img
+          id="colorHolder"
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/034/241/original/Color.jpg?1652466973"
+          alt="Color Place Holder"
+        />
+        <p>Shade Guide Information and QC SOP Notes will be Displayed Here</p>
+      </span>
+    </div>
+    <hr />
+    <div class="footer">
+      <strong>Revision 00</strong> - <em>Authored by Holly Robillard</em>
+      <span class="disclaimer"
+        >This page has been created in compliance with company quality control
+        processes.</span
+      >
+    </div>
+    <script>
+      alert(
+        "Hello! Welcome to the Quality Control Quick Reference page for Lab Technicians! To select a product to view, please click on the Change Product Type button. Happy QCing!"
+      );
+      function updateHeader(newHeader) {
+        let header = document.querySelector("h2");
+        header.innerHTML = newHeader;
+      }
+      function updateColors(link) {
+        document.getElementsByID("colorHolder").setAttribute("src", link);
+      }
+      function updateSubtext(newSubtext) {
+        let subtext = document.querySelector("p");
+        subtext.innerHTML = newSubtext;
+      }
+
+      function productOptions() {
+        let product = prompt(
+          "Which of the following products would you like to assess: Valplast, TCS, or Stock Teeth?"
+        );
+        if (product === "Valplast") {
+          updateHeader(`${product} Shade Information`);
+          updateColors(
+            "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/034/423/original/Valplast_Shades.jpg?1652666157"
+          );
+          updateSubtext(
+            `${product} shade guides may be puchased at the <a href="https://www.ordervalplast.com/valplast-shade-guide.aspx">${product} website</a>.`
+          );
+        }
+        if (product === "TCS") {
+          updateHeader(`${product} Shade Information`);
+          updateColors(
+            "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/034/540/original/TCS_Shades.png?1652744575"
+          );
+          updateSubtext(
+            `${product} shade guides cannot be puchased separately from placing an order for the material.`
+          );
+        }
+        if (product === "Stock Teeth") {
+          updateHeader(`${product} Shade Information`);
+          updateColors(" ");
+          updateSubtext(
+            `${product} shade guides must be purchased from the manufacturer. Each brand is expected to vary. Please match the shade and incisal edge as requested in the Rx.`
+          );
+        } else {
+          updateHeader(`Sorry, There is No Shade Information for ${product}`);
+          updateColors(" ");
+          updateSubtext("Please Input Another Product to Try Again");
+        }
+      }
+
+      let productButton = document.querySelector("button");
+      productButton.addEventListener("click", productOptions);
+    </script>
+  </body>
+</html>

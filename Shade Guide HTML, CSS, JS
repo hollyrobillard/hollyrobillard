@@ -150,7 +150,7 @@
 
       function productOptions() {
         let input = prompt(
-          "Which of the following products would you like to assess: Valplast, TCS, or Teeth?"
+          "Which of the following products would you like to assess: Valplast, TCS, Duraflex, or Teeth?"
         );
         product = input.toLowerCase();
         if (product === "valplast") {
@@ -168,6 +168,16 @@
           updateHeader(`${upperCaseProduct} Shade Information`);
           updateColors(
             "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/034/606/original/TCS_Shades.png?1652823685",
+            "500"
+          );
+          updateSubtext(
+            `${upperCaseProduct} shade guides cannot be puchased separately from placing an order for the material.`
+          );
+        } else if (product === "duraflex") {
+          upperCaseProduct = product[0].toUpperCase() + product.substring(1);
+          updateHeader(`${upperCaseProduct} Shade Information`);
+          updateColors(
+            "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/034/608/original/Duraflex_Shades.PNG?1652825414",
             "500"
           );
           updateSubtext(

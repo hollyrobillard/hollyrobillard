@@ -121,15 +121,16 @@
         let header = document.querySelector("h2");
         header.innerHTML = newHeader;
       }
-      function updateColors(link) {
+      function updateColors(link, width) {
         document.getElementById("colorHolder").setAttribute("src", link);
+        document.getElementById("colorHolder").width = width;
       }
-      function replaceImage(newCode) {
+      function replaceImage(idInfo, newCode) {
         var i,
           tmp,
           elm,
           last,
-          target = document.getElementById("colorHolder");
+          target = document.getElementById(idInfo);
         tmp = document.createElement(
           newCode.indexOf("<td") != -1 ? "tr" : "div"
         );
@@ -148,34 +149,44 @@
       }
 
       function productOptions() {
-        let product = prompt(
-          "Which of the following products would you like to assess: Valplast, TCS, or Stock Teeth?"
+        let input = prompt(
+          "Which of the following products would you like to assess: Valplast, TCS, or Teeth?"
         );
-        if (product === "Valplast") {
-          updateHeader(`${product} Shade Information`);
+        product = input.toLowerCase();
+        if (product === "valplast") {
+          upperCaseProduct = product[0].toUpperCase() + product.substring(1);
+          updateHeader(`${upperCaseProduct} Shade Information`);
           updateColors(
-            "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/034/423/original/Valplast_Shades.jpg?1652666157"
+            "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/034/423/original/Valplast_Shades.jpg?1652666157",
+            "500"
           );
           updateSubtext(
-            `${product} shade guides may be puchased at the <a href="https://www.ordervalplast.com/valplast-shade-guide.aspx">${product} website</a>.`
+            `${upperCaseProduct} shade guides may be puchased at the <a href="https://www.ordervalplast.com/valplast-shade-guide.aspx">${upperCaseProduct} website</a>. <br /> <br />`
           );
-        } else if (product === "TCS") {
-          updateHeader(`${product} Shade Information`);
+        } else if (product === "tcs") {
+          upperCaseProduct = product.toUpperCase();
+          updateHeader(`${upperCaseProduct} Shade Information`);
           updateColors(
-            "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/034/540/original/TCS_Shades.png?1652744575"
+            "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/034/606/original/TCS_Shades.png?1652823685",
+            "500"
           );
           updateSubtext(
-            `${product} shade guides cannot be puchased separately from placing an order for the material.`
+            `${upperCaseProduct} shade guides cannot be puchased separately from placing an order for the material.`
           );
-        } else if (product === "Stock Teeth") {
-          updateHeader(`${product} Shade Information`);
-          updateColors(" ");
+        } else if (product === "teeth") {
+          upperCaseProduct = product[0].toUpperCase() + product.substring(1);
+          updateHeader(`${upperCaseProduct} Shade Information`);
+          updateColors(
+            "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/034/607/original/Vita_Shade_Guide.jpg?1652823936",
+            "300"
+          );
           updateSubtext(
-            `${product} shade guides must be purchased from the manufacturer. Each brand is expected to vary. Please match the shade and incisal edge as requested in the Rx.`
+            `${upperCaseProduct} shade guides must be purchased from the manufacturer. Each brand is expected to vary. Please match the shade and incisal edge as requested in the Rx.`
           );
         } else {
           updateHeader(`Sorry, There is No Shade Information for ${product}`);
           replaceImage(
+            "colorHolder",
             "<br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />"
           );
           updateSubtext(

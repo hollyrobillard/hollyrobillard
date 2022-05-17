@@ -35,6 +35,9 @@
       }
       h2 {
         color: white;
+        display: block;
+        margin: 0 auto;
+        max-width: 500px;
       }
       button {
         display: block;
@@ -119,7 +122,25 @@
         header.innerHTML = newHeader;
       }
       function updateColors(link) {
-        document.getElementsByID("colorHolder").setAttribute("src", link);
+        document.getElementById("colorHolder").setAttribute("src", link);
+      }
+      function replaceImage(newCode) {
+        var i,
+          tmp,
+          elm,
+          last,
+          target = document.getElementById("colorHolder");
+        tmp = document.createElement(
+          newCode.indexOf("<td") != -1 ? "tr" : "div"
+        );
+        tmp.innerHTML = newCode;
+        i = tmp.childNodes.length;
+        last = target;
+        while (i--) {
+          target.parentNode.insertBefore((elm = tmp.childNodes[i]), last);
+          last = elm;
+        }
+        target.parentNode.removeChild(target);
       }
       function updateSubtext(newSubtext) {
         let subtext = document.querySelector("p");
@@ -138,8 +159,7 @@
           updateSubtext(
             `${product} shade guides may be puchased at the <a href="https://www.ordervalplast.com/valplast-shade-guide.aspx">${product} website</a>.`
           );
-        }
-        if (product === "TCS") {
+        } else if (product === "TCS") {
           updateHeader(`${product} Shade Information`);
           updateColors(
             "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/034/540/original/TCS_Shades.png?1652744575"
@@ -147,8 +167,7 @@
           updateSubtext(
             `${product} shade guides cannot be puchased separately from placing an order for the material.`
           );
-        }
-        if (product === "Stock Teeth") {
+        } else if (product === "Stock Teeth") {
           updateHeader(`${product} Shade Information`);
           updateColors(" ");
           updateSubtext(
@@ -156,8 +175,12 @@
           );
         } else {
           updateHeader(`Sorry, There is No Shade Information for ${product}`);
-          updateColors(" ");
-          updateSubtext("Please Input Another Product to Try Again");
+          replaceImage(
+            "<br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />"
+          );
+          updateSubtext(
+            "Please Input Another Product to Try Again <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />"
+          );
         }
       }
 

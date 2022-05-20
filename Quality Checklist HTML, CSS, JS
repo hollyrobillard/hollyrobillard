@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partial Dentures Digital Design Checklist</title>
+</head>
+<style>
+    body {
+        margin: 0px;
+    }
+    .header {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        background-color: black;
+    }
+    #content {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        background: linear-gradient(#4CCFAD, #56C8EC, #4CCFAD, #56C8EC, #4CCFAD);
+        display: block;
+    }
+    #acetalContent {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        background: linear-gradient(#4CCFAD, #56C8EC, #4CCFAD, #56C8EC, #4CCFAD);
+        display: none;
+    }
+    #flexibleContent {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        background: linear-gradient(#4CCFAD, #56C8EC, #4CCFAD, #56C8EC, #4CCFAD);
+        display: none;
+    }
+    #metalContent {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        background: linear-gradient(#4CCFAD, #56C8EC, #4CCFAD, #56C8EC, #4CCFAD);
+        display: none;
+    }
+    h1 {
+        text-align: center;
+        color: white;
+        text-shadow: 1px 1px grey;
+        padding: 0px auto 50px auto;
+
+    }
+    button {
+        display: block;
+        margin: 0 auto;
+        color: #56C8EC;
+        background-color: white;
+        border-color: #4CCFAD;
+        font-style: italic;
+        font-weight: bold;
+        font-size: medium;
+        border-radius: 4px;
+        padding: 20px 30px;
+        box-shadow: 4px 4px grey;
+        transition: all 200ms ease-in-out;
+    }
+    button:hover {
+        color: white;
+        background-color: #4CCFAD;
+        border-color: black;
+    }
+    .upperDetails {
+        margin: 0px;
+        padding-left: 30px;
+        color: white;
+    }
+    .upperText {
+        margin-left: 30px;
+    }
+    .tab {
+        padding-left: 40px;
+    }
+    .details {
+        margin: 0px;
+        padding-left: 60px;
+    }
+    .text {
+        margin-left: 60px;
+        width: 50%;
+        height: 40px;
+    }
+    .subtext {
+        margin: 0px;
+    }
+    .subtextSecond {
+        margin: 0px 0px 0px 40px;
+    }
+    .bottom {
+        padding-left: 0;
+        margin: 0;
+    }
+    .bottomDetails {
+        margin: 0px;
+        padding-left: 30px;
+    }
+    .bottomText {
+        margin-left: 0px;
+        width: 50%;
+        height: 40px;
+    }
+</style>
+<body>
+    <br>
+    <div class = "header">
+        <br>
+        <h1>Partial Dentures Digital Design Checklist</h1>
+        <button>Select Material Type</button>
+        <br>
+        <br>
+        <p class="upperDetails"><b>Case #:</b></p>
+        <input type="text" class="upperText">
+        <br>
+        <br>
+    </div>
+    <div id = "content">
+        <br>
+    </div>
+    <div id = "acetalContent">
+        <br>
+        <ul>
+        <form action="/action_page.php">
+            <li>Rx: Material</li>
+                <input type="checkbox" id="criteria1" name="criteria1" value="criteria1"><label for="criteria1"> Acetal</label><br>
+            <li>Rx: Partial Coverage</li>
+                <input type="checkbox" id="criteria2" name="criteria2" value="criteria2"><label for="criteria2"> Unilateral</label><br>
+                <input type="checkbox" id="criteria3" name="criteria3" value="criteria3"><label for="criteria3"> Bilateral</label><br>
+            <li>Rx: Arch</li>
+                <input type="checkbox" id="criteria4" name="criteria4" value="criteria4"><label for="criteria4"> Upper</label><br>
+                <input type="checkbox" id="criteria5" name="criteria5" value="criteria5"><label for="criteria5"> Lower</label><br>
+                <input type="checkbox" id="criteria6" name="criteria6" value="criteria6"><label for="criteria6"> Both</label><br>
+            <li>Rx: Teeth to be Replaced</li>
+                <input type="checkbox" id="criteria7" name="criteria7" value="criteria7"><label for="criteria7"> Matches the Rx</label><br>
+                <ul class = "tab">Discrepancies?</ul>
+                <p class="details">List Here:</p>
+                <input type="text" class="text">
+            <li>Rx: Teeth to be Extracted</li>
+                <input type="checkbox" id="criteria8" name="criteria8" value="criteria8"><label for="criteria8"> Matches the Rx</label><br>
+                <ul class = "tab">Discrepancies?</ul>
+                <p class="details">List Here:</p>
+                <input type="text" class="text">
+            <li>Rx: Clasp Material</li>
+                <input type="checkbox" id="criteria9" name="criteria9" value="criteria9"><label for="criteria9"> Metal</label><br>
+                <input type="checkbox" id="criteria10" name="criteria10" value="criteria10"><label for="criteria10"> Tissue Shade</label><br>
+                <ul class = "tab">Discrepancies?</ul>
+                <p class="details">List Here:</p>
+                <input type="text" class="text">
+            <li>Rx: Clasp Preferences</li>
+                <input type="checkbox" id="criteria11" name="criteria11" value="criteria11"><label for="criteria11"> Matches the Rx</label><br>
+            <li>Rx: Doctor Notes Met?</li>
+                <p class="subtext"><em>Pay close attention for specific rest and clasp placements.  Acetal partial dentures should not have rests unless non-negotiable by the doctor - must have 1mm thickness on the base.</em></p>    
+                <input type="checkbox" id="criteria12" name="criteria12" value="criteria12"><label for="criteria12"> Matches the Rx</label><br>
+                <ul class = "tab">Additional Notes?</ul>
+                <p class="details">List Here:</p>
+                <input type="text" class="text">
+<br>
+<br>
+<br>
+            <li>Clasp Design: Anterior Teeth Type of Clasp</li>
+                <input type="checkbox" id="criteria13" name="criteria13" value="criteria13"><label for="criteria13"> Aesthetic Clasp</label><br>
+                <input type="checkbox" id="criteria14" name="criteria14" value="criteria14"><label for="criteria14"> Functioning Clasp</label><br>
+                <ul class = "tab">Additional Notes?</ul>
+                <p class="details">List Here:</p>
+                <input type="text" class="text">
+            <li>Clasp Design: Posterior Teeth Type of Clasp</li>
+                <input type="checkbox" id="criteria15" name="criteria15" value="criteria15"><label for="criteria15"> Aesthetic Clasp</label><br>
+                <input type="checkbox" id="criteria16" name="criteria16" value="criteria16"><label for="criteria16"> Functioning Clasp</label><br>
+                <ul class = "tab">Additional Notes?</ul>
+                <p class="details">List Here:</p>
+                <input type="text" class="text">
+            <li>Major Connector Design: Style for Upper Arch</li>
+                <input type="checkbox" id="criteria17" name="criteria17" value="criteria17"><label for="criteria17"> Horseshoe</label><br>
+                <input type="checkbox" id="criteria18" name="criteria18" value="criteria18"><label for="criteria18"> Doctor Request</label><br>
+                <ul class = "tab">Additional Notes?</ul>
+                <p class="details">List Here:</p>
+                <input type="text" class="text">
+            <li>Major Connector Design: Style for Lower Arch</li>
+                <input type="checkbox" id="criteria19" name="criteria19" value="criteria19"><label for="criteria19"> Lingual Plating</label><br>
+                <input type="checkbox" id="criteria20" name="criteria20" value="criteria20"><label for="criteria20"> Doctor Request</label><br>
+                <ul class = "tab">Additional Notes?</ul>
+                <p class="details">List Here:</p>
+                <input type="text" class="text">
+<br>
+<br>
+<br>
+                <input type="checkbox" id="criteria21" name="criteria21" value="criteria21"><label for="criteria21"> Clasp Design: Retention</label><br>            
+                    <p class="subtextSecond"><em>Do all clasps retain the partial denture adequately? Are they all properly engaging the undercuts?</em></p> 
+                <input type="checkbox" id="criteria22" name="criteria22" value="criteria22"><label for="criteria22"> Clasp Design: 1.5-2.0mm Thickness</label><br>  
+                <input type="checkbox" id="criteria23" name="criteria23" value="criteria23"><label for="criteria23"> Clasp Design: 4.0-7.0mm Width</label><br>  
+                <input type="checkbox" id="criteria24" name="criteria24" value="criteria24"><label for="criteria24"> Clasp Design: Tapers to a Point</label><br>  
+                    <p class="subtextSecond"><em>Check the width and thickness of the clasp.</em></p> 
+                <input type="checkbox" id="criteria25" name="criteria25" value="criteria25"><label for="criteria25"> Clasp Design: Rounded Ends</label><br>  
+                <input type="checkbox" id="criteria26" name="criteria26" value="criteria26"><label for="criteria26"> Clasp Design: Wide at the Shoulder</label><br>
+                    <p class="subtextSecond"><em>Check width of the clasp. Should be even wider at the posteriors.</em></p> 
+                <input type="checkbox" id="criteria27" name="criteria27" value="criteria27"><label for="criteria27"> Clasp Design: Connects Well to Major (or Minor) Connector</label><br>  
+                <input type="checkbox" id="criteria28" name="criteria28" value="criteria28"><label for="criteria28"> Clasp Design: Tip of the Clasp Sits Below the Height of Contour</label><br>
+                    <p class="subtextSecond"><em>Please note if a clasp needed to sit above the height of contour for any reason.</em></p> 
+                <input type="checkbox" id="criteria29" name="criteria29" value="criteria29"><label for="criteria29"> Major Connector Design: Beadline</label><br>  
+                    <p class="subtextSecond"><em>Only designed if requested or injected.</em></p>
+                <input type="checkbox" id="criteria30" name="criteria30" value="criteria30"><label for="criteria30"> Major Connector Design: 1.5-2.0mm Thickness</label><br>  
+                    <p class="subtextSecond"><em>Only for the upper arch.</em></p>
+                <input type="checkbox" id="criteria31" name="criteria31" value="criteria31"><label for="criteria31"> Major Connector Design: Smooth/No Added Texture</label><br>
+                <input type="checkbox" id="criteria32" name="criteria32" value="criteria32"><label for="criteria32"> Mesh Pattern Design: Aligned with the Framework</label><br> 
+                    <p class="subtextSecond"><em>Confirm the mesh pattern runs parallel to the arch.</em></p>
+                <input type="checkbox" id="criteria33" name="criteria33" value="criteria33"><label for="criteria33"> Mesh Pattern Design: No Post Dowels</label><br>
+                <input type="checkbox" id="criteria34" name="criteria34" value="criteria34"><label for="criteria34"> Occlusion</label><br> 
+                    <p class="subtextSecond"><em>Confirm that the opposing arch is not hitting the framework and there is only light occlusion on the occlusal rests.</em></p>
+                <input type="checkbox" id="criteria35" name="criteria35" value="criteria35"><label for="criteria35"> Aesthetics Design: Smooth/No Added Texture</label><br> 
+                <input type="checkbox" id="criteria36" name="criteria36" value="criteria36"><label for="criteria36"> Aesthetics Design: Over the Ridge into the Vestibule Area</label><br> 
+                    <p class="subtextSecond"><em>Not scalloped at the anteriors.</em></p>
+<br>
+<br>
+<br>    
+                <ul class="bottom">Additional Case Notes?</ul>
+                <input type="text" class="bottomText">
+<br>
+<br>
+        </form>
+        </ul>
+    </div>
+    <div id = "flexibleContent">
+        <br>
+        <ul>
+        <form action="/action_page.php">
+            <li>Rx: Material</li>
+                <input type="checkbox" id="criteria37" name="criteria37" value="criteria37"><label for="criteria37"> Valplast/TCS</label><br>
+                <input type="checkbox" id="criteria38" name="criteria38" value="criteria38"><label for="criteria38"> Duraflex</label><br>
+            <li>Rx: Partial Coverage</li>
+                <input type="checkbox" id="criteria39" name="criteria39" value="criteria39"><label for="criteria39"> Unilateral</label><br>
+                <input type="checkbox" id="criteria40" name="criteria40" value="criteria40"><label for="criteria40"> Bilateral</label><br>
+            <li>Rx: Arch</li>
+                <input type="checkbox" id="criteria41" name="criteria41" value="criteria41"><label for="criteria41"> Upper</label><br>
+                <input type="checkbox" id="criteria42" name="criteria42" value="criteria42"><label for="criteria42"> Lower</label><br>
+                <input type="checkbox" id="criteria43" name="criteria43" value="criteria43"><label for="criteria43"> Both</label><br>
+            <li>Rx: Teeth to be Replaced</li>
+                <input type="checkbox" id="criteria44" name="criteria44" value="criteria44"><label for="criteria44"> Matches the Rx</label><br>
+                <ul class = "tab">Discrepancies?</ul>
+                <p class="details">List Here:</p>
+                <input type="text" class="text">
+            <li>Rx: Teeth to be Extracted</li>
+                <input type="checkbox" id="criteria45" name="criteria45" value="criteria45"><label for="criteria45"> Matches the Rx</label><br>
+                <ul class = "tab">Discrepancies?</ul>
+                <p class="details">List Here:</p>
+                <input type="text" class="text">
+            <li>Rx: Clasp Preferences</li>
+                <input type="checkbox" id="criteria46" name="criteria46" value="criteria46"><label for="criteria46"> Matches the Rx</label><br>
+            <li>Rx: Doctor Notes Met?</li>
+                <p class="subtext"><em>Pay close attention for specific rest and clasp placements. Acrylic partial dentures should not have rests unless non-negotiable by the doctor. Implant or crown retained systems should not be included unless non-negotiable by the doctor - will not be functional.</em></p>    
+                <input type="checkbox" id="criteria47" name="criteria47" value="criteria47"><label for="criteria47"> Matches the Rx</label><br>
+                <ul class = "tab">Additional Notes?</ul>
+                <p class="details">List Here:</p>
+                <input type="text" class="text">
+<br>
+<br>
+<br>
+            <li>Clasp Design: Anterior Teeth Type of Clasp</li>
+                <input type="checkbox" id="criteria48" name="criteria48" value="criteria48"><label for="criteria48"> Aesthetic Clasp</label><br>
+                <input type="checkbox" id="criteria49" name="criteria49" value="criteria49"><label for="criteria49"> Functioning Clasp</label><br>
+                <ul class = "tab">Additional Notes?</ul>
+                <p class="details">List Here:</p>
+                <input type="text" class="text">
+            <li>Clasp Design: Posterior Teeth Type of Clasp</li>
+                <input type="checkbox" id="criteria50" name="criteria50" value="criteria50"><label for="criteria50"> Aesthetic Clasp</label><br>
+                <input type="checkbox" id="criteria51" name="criteria51" value="criteria51"><label for="criteria51"> Functioning Clasp</label><br>
+                <ul class = "tab">Additional Notes?</ul>
+                <p class="details">List Here:</p>
+                <input type="text" class="text">
+            <li>Major Connector Design: Style for Upper Arch</li>
+                <input type="checkbox" id="criteria52" name="criteria52" value="criteria52"><label for="criteria52"> Horseshoe</label><br>
+                <input type="checkbox" id="criteria53" name="criteria53" value="criteria53"><label for="criteria53"> Lingual Plating</label><br>
+                <input type="checkbox" id="criteria54" name="criteria54" value="criteria54"><label for="criteria54"> Doctor Request</label><br>
+                <ul class = "tab">Additional Notes?</ul>
+                <p class="details">List Here:</p>
+                <input type="text" class="text">
+            <li>Major Connector Design: Style for Lower Arch</li>
+                <input type="checkbox" id="criteria55" name="criteria55" value="criteria55"><label for="criteria55"> Lingual Plating</label><br>
+                <input type="checkbox" id="criteria56" name="criteria56" value="criteria56"><label for="criteria56"> Doctor Request</label><br>
+                <ul class = "tab">Additional Notes?</ul>
+                <p class="details">List Here:</p>
+                <input type="text" class="text">
+<br>
+<br>
+<br>
+                <input type="checkbox" id="criteria57" name="criteria57" value="criteria57"><label for="criteria57"> Clasp Design: Retention</label><br>            
+                    <p class="subtextSecond"><em>Do all clasps retain the partial denture adequately? Are they all properly engaging the undercuts?</em></p> 
+                <input type="checkbox" id="criteria58" name="criteria58" value="criteria58"><label for="criteria58"> Clasp Design: 1.5-2.0mm Thickness</label><br>  
+                <input type="checkbox" id="criteria59" name="criteria59" value="criteria59"><label for="criteria59"> Clasp Design: 4.0-7.0mm Width</label><br>  
+                <input type="checkbox" id="criteria60" name="criteria60" value="criteria60"><label for="criteria60"> Clasp Design: 55% Tip Thinning Factor</label><br>  
+                    <p class="subtextSecond"><em>Check the width and thickness of the clasp.</em></p> 
+                <input type="checkbox" id="criteria61" name="criteria61" value="criteria61"><label for="criteria61"> Clasp Design: 1.0mm Rounding Radius Factor</label><br>  
+                <input type="checkbox" id="criteria62" name="criteria62" value="criteria62"><label for="criteria62"> Clasp Design: Rounded Ends</label><br>  
+                <input type="checkbox" id="criteria63" name="criteria63" value="criteria63"><label for="criteria63"> Clasp Design: Connects Well to Minor Connector</label><br>  
+                <input type="checkbox" id="criteria64" name="criteria64" value="criteria64"><label for="criteria64"> Clasp Design: Tip of the Clasp Sits Below the Height of Contour</label><br>  
+                <input type="checkbox" id="criteria65" name="criteria65" value="criteria65"><label for="criteria65"> Clasp Design: Extends Past the Gingival Margin</label><br>
+                    <p class="subtextSecond"><em>Block outs are added to prevent irritation to the tissue.</em></p> 
+                <input type="checkbox" id="criteria66" name="criteria66" value="criteria66"><label for="criteria66"> Clasp Design: Double Acres Design Only When Necessary</label><br>
+                    <p class="subtextSecond"><em>Only added when contours are deficient on the adjacent tooth where a standard clasp design may result in poor retention.</em></p>
+                <input type="checkbox" id="criteria67" name="criteria67" value="criteria67"><label for="criteria67"> Minor Connector Design: Placement</label><br>  
+                    <p class="subtextSecond"><em>Part of the lingual plating to give the illusion of a proximal guide plane.</em></p>
+                <input type="checkbox" id="criteria68" name="criteria68" value="criteria68"><label for="criteria68"> Minor Connector Design: Attached to the Major Connector</label><br>  
+                <input type="checkbox" id="criteria69" name="criteria69" value="criteria69"><label for="criteria69"> Minor Connector Design: 1.5-2.0mm Thickness</label><br>  
+                <input type="checkbox" id="criteria70" name="criteria70" value="criteria70"><label for="criteria70"> Major Connector Design: Beadline</label><br>  
+                    <p class="subtextSecond"><em>Only for the upper arch. Only designed if requested.</em></p>
+                <input type="checkbox" id="criteria71" name="criteria71" value="criteria71"><label for="criteria71"> Major Connector Design: 1.5-2.0mm Thickness</label><br>  
+                <input type="checkbox" id="criteria72" name="criteria72" value="criteria72"><label for="criteria72"> Major Connector Design: Smooth/No Added Texture</label><br>  
+                <input type="checkbox" id="criteria73" name="criteria73" value="criteria73"><label for="criteria73"> Mesh Pattern Design: Aligned with the Framework</label><br> 
+                    <p class="subtextSecond"><em>Confirm the mesh pattern runs parallel to the arch.</em></p>
+                <input type="checkbox" id="criteria74" name="criteria74" value="criteria74"><label for="criteria74"> Occlusion</label><br> 
+                    <p class="subtextSecond"><em>Confirm that the opposing arch is not hitting the framework and there is only light occlusion on the occlusal rests.</em></p>
+                <input type="checkbox" id="criteria75" name="criteria75" value="criteria75"><label for="criteria75"> Aesthetics Design: Smooth/No Added Texture</label><br> 
+                <input type="checkbox" id="criteria76" name="criteria76" value="criteria76"><label for="criteria76"> Aesthetics Design: Scalloping at the Anteriors</label><br> 
+<br>
+<br>
+<br>    
+                <ul class="bottom">Additional Case Notes?</ul>
+                <input type="text" class="bottomText">
+<br>
+<br>
+        </form>
+        </ul>
+    </div>
+    <div id = "metalContent">
+        <br>
+        <ul>
+        <form action="/action_page.php">
+            <li>Rx: Material</li>
+                <input type="checkbox" id="criteria77" name="criteria77" value="criteria77" class="metal"><label for="criteria77" class="metal"> Chrome-Cobalt</label><br>
+                <input type="checkbox" id="criteria78" name="criteria78" value="criteria78" class="metal"><label for="criteria78" class="metal"> Titanium</label><br>
+            <li>Rx: Partial Coverage</li>
+                <input type="checkbox" id="criteria79" name="criteria79" value="criteria79"><label for="criteria79"> Unilateral</label><br>
+                <input type="checkbox" id="criteria80" name="criteria80" value="criteria80"><label for="criteria80"> Bilateral</label><br>
+            <li>Rx: Arch</li>
+                <input type="checkbox" id="criteria81" name="criteria81" value="criteria81"><label for="criteria81"> Upper</label><br>
+                <input type="checkbox" id="criteria82" name="criteria82" value="criteria82"><label for="criteria82"> Lower</label><br>
+                <input type="checkbox" id="criteria83" name="criteria83" value="criteria83"><label for="criteria83"> Both</label><br>
+            <li>Rx: Teeth to be Replaced</li>
+                <input type="checkbox" id="criteria84" name="criteria84" value="criteria84"><label for="criteria84"> Matches the Rx</label><br>
+                <ul class = "tab">Discrepancies?</ul>
+                <p class="details">List Here:</p>
+                <input type="text" class="text">
+            <li>Rx: Teeth to be Extracted</li>
+                <input type="checkbox" id="criteria85" name="criteria85" value="criteria85"><label for="criteria85"> Matches the Rx</label><br>
+                <ul class = "tab">Discrepancies?</ul>
+                <p class="details">List Here:</p>
+                <input type="text" class="text">
+            <li>Rx: Clasp Material</li>
+                <input type="checkbox" id="criteria86" name="criteria86" value="criteria86"><label for="criteria86"> Metal</label><br>
+                <input type="checkbox" id="criteria87" name="criteria87" value="criteria87"><label for="criteria87"> Tissue Shade</label><br>
+                <ul class = "tab">Discrepancies?</ul>
+                <p class="details">List Here:</p>
+                <input type="text" class="text">
+            <li>Rx: Clasp Preferences</li>
+                <input type="checkbox" id="criteria88" name="criteria88" value="criteria88"><label for="criteria88"> Matches the Rx</label><br>
+            <li>Rx: Doctor Notes Met?</li>
+                <p class="subtext"><em>Pay close attention for specific rest and clasp placements.</em></p>    
+                <input type="checkbox" id="criteria89" name="criteria89" value="criteria89"><label for="criteria89"> Matches the Rx</label><br>
+                <ul class = "tab">Additional Notes?</ul>
+                <p class="details">List Here:</p>
+                <input type="text" class="text">
+<br>
+<br>
+<br>
+            <li>Clasp Design: Anterior Teeth Type of Clasp</li>
+                <input type="checkbox" id="criteria90" name="criteria90" value="criteria90"><label for="criteria90"> Aesthetic Clasp</label><br>
+                <input type="checkbox" id="criteria91" name="criteria91" value="criteria91"><label for="criteria91"> Functioning Clasp</label><br>
+                <ul class = "tab">Additional Notes?</ul>
+                <p class="details">List Here:</p>
+                <input type="text" class="text">
+            <li>Clasp Design: Posterior Teeth Type of Clasp</li>
+                <input type="checkbox" id="criteria92" name="criteria92" value="criteria92"><label for="criteria92"> Aesthetic Clasp</label><br>
+                <input type="checkbox" id="criteria93" name="criteria93" value="criteria93"><label for="criteria93"> Functioning Clasp</label><br>
+                <ul class = "tab">Additional Notes?</ul>
+                <p class="details">List Here:</p>
+                <input type="text" class="text">
+            <li>Major Connector Design: Style for Upper Arch</li>
+                <input type="checkbox" id="criteria94" name="criteria94" value="criteria94"><label for="criteria94"> Horseshoe</label><br>
+                <input type="checkbox" id="criteria95" name="criteria95" value="criteria95"><label for="criteria95"> Open Palate</label><br>
+                <input type="checkbox" id="criteria96" name="criteria96" value="criteria96"><label for="criteria96"> Palatal Strap</label><br>
+                <input type="checkbox" id="criteria97" name="criteria97" value="criteria97"><label for="criteria97"> Doctor Request</label><br>
+                <ul class = "tab">Additional Notes?</ul>
+                <p class="details">List Here:</p>
+                <input type="text" class="text">
+            <li>Major Connector Design: Style for Lower Arch</li>
+                <input type="checkbox" id="criteria98" name="criteria98" value="criteria98"><label for="criteria98"> Lingual Bar</label><br>
+                <input type="checkbox" id="criteria99" name="criteria99" value="criteria99"><label for="criteria99"> Lingual Plating</label><br>
+                <input type="checkbox" id="criteria100" name="criteria100" value="criteria100"><label for="criteria100"> Doctor Request</label><br>
+                <ul class = "tab">Additional Notes?</ul>
+                <p class="details">List Here:</p>
+                <input type="text" class="text">
+<br>
+<br>
+<br>
+                <input type="checkbox" id="criteria101" name="criteria101" value="criteria101"><label for="criteria101"> Clasp Design: Retention</label><br>            
+                    <p class="subtextSecond"><em>Do all clasps retain the partial denture adequately? Are they all properly engaging the undercuts?</em></p> 
+                <input type="checkbox" id="criteria102" name="criteria102" value="criteria102"><label for="criteria102"> Clasp Design: 0.5-1.0mm Thickness</label><br>  
+                <input type="checkbox" id="criteria103" name="criteria103" value="criteria103"><label for="criteria103"> Clasp Design: 1.0-1.5mm Width</label><br>  
+                <input type="checkbox" id="criteria104" name="criteria104" value="criteria104"><label for="criteria104"> Clasp Design: 55% Tip Thinning Factor</label><br>  
+                    <p class="subtextSecond"><em>Check the width and thickness of the clasp.</em></p> 
+                <input type="checkbox" id="criteria105" name="criteria105" value="criteria105"><label for="criteria105"> Clasp Design: 1.0mm Rounding Radius Factor</label><br>  
+                <input type="checkbox" id="criteria106" name="criteria106" value="criteria106"><label for="criteria106"> Clasp Design: Rounded Ends</label><br>  
+                <input type="checkbox" id="criteria107" name="criteria107" value="criteria107"><label for="criteria107"> Clasp Design: Connects Well to Minor Connector</label><br>  
+                <input type="checkbox" id="criteria108" name="criteria108" value="criteria108"><label for="criteria108"> Clasp Design: Shoulder is High Enough on the Height of Contour</label><br>  
+                <input type="checkbox" id="criteria109" name="criteria109" value="criteria109"><label for="criteria109"> Minor Connector Design: Placement</label><br>  
+                    <p class="subtextSecond"><em>Confirm placement is in the distal proximal or interproximal areas lingually.</em></p>
+                <input type="checkbox" id="criteria110" name="criteria110" value="criteria110"><label for="criteria110"> Minor Connector Design: 1.0mm Thickness</label><br>  
+                    <p class="subtextSecond"><em>Confirm thickness targets 1mm. Thickness is no more than 3mm and no less than 1mm.</em></p>
+                <input type="checkbox" id="criteria111" name="criteria111" value="criteria111"><label for="criteria111"> Major Connector Design: Beadline</label><br>  
+                    <p class="subtextSecond"><em>Only for the upper arch. Only designed if requested.</em></p>
+                <input type="checkbox" id="criteria112" name="criteria112" value="criteria112"><label for="criteria112"> Major Connector Design: 1.0-1.5mm Thickness</label><br>  
+                    <p class="subtextSecond"><em>Only for the upper arch.</em></p>
+                <input type="checkbox" id="criteria113" name="criteria113" value="criteria113"><label for="criteria113"> Major Connector Design: Texture on Lingual Plating</label><br>  
+                    <p class="subtextSecond"><em>Only for the lower arch. Only designed if requested.</em></p>
+                <input type="checkbox" id="criteria114" name="criteria114" value="criteria114"><label for="criteria114"> Mesh Pattern Design: Aligned with the Framework</label><br> 
+                    <p class="subtextSecond"><em>Confirm the mesh pattern runs parallel to the arch.</em></p>
+                <input type="checkbox" id="criteria115" name="criteria115" value="criteria115"><label for="criteria115"> Mesh Pattern Design: Metal Stops</label><br> 
+                    <p class="subtextSecond"><em>Confirm metal stops are added to the distal side of the framework.</em></p>
+                <input type="checkbox" id="criteria116" name="criteria116" value="criteria116"><label for="criteria116"> Occlusion</label><br> 
+                    <p class="subtextSecond"><em>Confirm that the opposing arch is not hitting the framework and there is only light occlusion on the occlusal rests.</em></p>
+                <input type="checkbox" id="criteria117" name="criteria117" value="criteria117"><label for="criteria117"> Aesthetics Design: Stippling Added</label><br> 
+                <input type="checkbox" id="criteria118" name="criteria118" value="criteria118"><label for="criteria118"> Aesthetics Design: Scalloping at the Anteriors</label><br> 
+<br>
+<br>
+<br>    
+                <ul class="bottom">Additional Case Notes?</ul>
+                <input type="text" class="bottomText">
+<br>
+<br>
+        </form>
+        </ul>
+    </div>
+    <script>
+    function updateContent() {
+        let material = prompt("Material Type?");
+        lowerMaterial = material.toLowerCase();
+        if (lowerMaterial === "acetal") {
+            document.getElementById("acetalContent").style.display = "block";
+            document.getElementById("content").style.display = "none";
+            document.getElementById("flexibleContent").style.display = "none";
+            document.getElementById("metalContent").style.display = "none";
+        } else if (lowerMaterial === "valplast" || lowerMaterial === "tcs" || lowerMaterial === "flexible") {
+            document.getElementById("flexibleContent").style.display = "block";
+            document.getElementById("content").style.display = "none";
+            document.getElementById("metalContent").style.display = "none";
+            document.getElementById("acetalContent").style.display = "none";
+        } else if (lowerMaterial === "metal" || lowerMaterial === "titanium" || lowerMaterial === "cc" || lowerMaterial === "chromecobalt" || lowerMaterial === "chrome cobalt" || lowerMaterial === "chrome-cobalt") {
+            document.getElementById("metalContent").style.display = "block";
+            document.getElementById("content").style.display = "none";
+            document.getElementById("flexibleContent").style.display = "none";
+            document.getElementById("acetalContent").style.display = "none";
+        } else {
+            document.getElementById("content").style.display = "block";
+            document.getElementById("flexibleContent").style.display = "none";
+            document.getElementById("acetalContent").style.display = "none";
+            document.getElementById("metalContent").style.display = "none";
+        }
+    }
+
+    let materialButton = document.querySelector("button");
+    materialButton.addEventListener("click", updateContent);
+    </script>
+</body>
+</html>

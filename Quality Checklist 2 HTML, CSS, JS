@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Night Guards Digital Design Checklist</title>
+</head>
+<style>
+    body {
+        margin: 0px;
+    }
+    .header {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        background-color: black;
+    }
+    #content {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        background: linear-gradient(#4CCFAD, #56C8EC, #4CCFAD, #56C8EC, #4CCFAD);
+        display: block;
+    }
+    #flatPlaneContent {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        background: linear-gradient(#4CCFAD, #56C8EC, #4CCFAD, #56C8EC, #4CCFAD);
+        display: none;
+    }
+    #followAnatomyContent {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        background: linear-gradient(#4CCFAD, #56C8EC, #4CCFAD, #56C8EC, #4CCFAD);
+        display: none;
+    }
+    #posteriorIndentationsContent {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        background: linear-gradient(#4CCFAD, #56C8EC, #4CCFAD, #56C8EC, #4CCFAD);
+        display: none;
+    }
+    #astronSpecifics {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        background-color: rgba(128, 128, 128, 0.647);
+        display: none;
+        padding-left: 40px;
+    }
+    #canineGuidanceSpecifics {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        background-color: rgba(128, 128, 128, 0.647);
+        display: none;
+        padding-left: 40px;
+    }
+    #anteriorGuidanceSpecifics {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        background-color: rgba(128, 128, 128, 0.647);
+        display: none;
+        padding-left: 40px;
+    }
+    h1 {
+        text-align: center;
+        color: white;
+        text-shadow: 1px 1px grey;
+        padding: 0px auto 50px auto;
+
+    }
+    button {
+        display: block;
+        margin: 0 auto;
+        color: #56C8EC;
+        background-color: white;
+        border-color: #4CCFAD;
+        font-style: italic;
+        font-weight: bold;
+        font-size: medium;
+        border-radius: 4px;
+        padding: 20px 30px;
+        box-shadow: 4px 4px grey;
+        transition: all 200ms ease-in-out;
+    }
+    button:hover {
+        color: white;
+        background-color: #4CCFAD;
+        border-color: black;
+    }
+    #bottomButton {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        background-color: black;
+        display: none;
+    }
+    .upperDetails {
+        margin: 0px;
+        padding-left: 30px;
+        color: white;
+    }
+    .upperText {
+        margin-left: 30px;
+    }
+    .tab {
+        padding-left: 40px;
+    }
+    .details {
+        margin: 0px;
+        padding-left: 60px;
+    }
+    .text {
+        margin-left: 60px;
+        width: 50%;
+        height: 40px;
+    }
+    .subtext {
+        margin: 0px;
+    }
+    .subtextSecond {
+        margin: 0px 0px 0px 40px;
+    }
+    .bottom {
+        padding-left: 0;
+        margin: 0;
+    }
+    .bottomDetails {
+        margin: 0px;
+        padding-left: 30px;
+    }
+    .bottomText {
+        margin-left: 0px;
+        width: 50%;
+        height: 40px;
+    }
+</style>
+<body>
+    <br>
+    <div class = "header">
+        <br>
+        <h1>Night Guards Digital Design Checklist</h1>
+        <button>Specify Case Details</button>
+        <br>
+        <br>
+        <p class="upperDetails"><b>Case #:</b></p>
+        <input type="text" class="upperText">
+        <br>
+        <br>
+    </div>
+    <div id = "content">
+        <br>
+    </div>
+    <div id = "flatPlaneContent">
+        <br>
+        <ul>
+        <form 
+        method = "POST" 
+        action="https://script.google.com/a/macros/meetdandy.com/s/AKfycbzri76UUZqaEGTDwf4a-s2tHl9mgld2Obq11_H8Gmpg-ilYnzQHw2uECGpt614NQvzk/exec">
+            <li>Rx: Material</li>
+                <input type="checkbox" id="criteria1" name="criteria1" value="criteria1"><label for="criteria1"> Astron</label><br>
+                <input type="checkbox" id="criteria1" name="criteria1" value="criteria1"><label for="criteria1"> KeySplint</label><br>
+            <li>Rx: Arch</li>
+                <input type="checkbox" id="criteria2" name="criteria2" value="criteria2"><label for="criteria2"> Upper</label><br>
+                <input type="checkbox" id="criteria3" name="criteria3" value="criteria3"><label for="criteria3"> Lower</label><br>
+                <input type="checkbox" id="criteria4" name="criteria4" value="criteria4"><label for="criteria4"> Both</label><br>
+            <li>Rx: Thickness</li>
+                <input type="checkbox" id="criteria5" name="criteria5" value="criteria5"><label for="criteria5"> 2.0mm</label><br>
+                <input type="checkbox" id="criteria6" name="criteria6" value="criteria6"><label for="criteria6"> Doctor Request</label><br>
+                <ul class = "tab">Additional Notes?</ul>
+                <p class="details">List Here:</p>
+                <input type="text" class="text">       
+            <li>Rx: Height on Tooth</li>
+                <p class="subtext"><em>Design should be cut straight across at the specified height.</em></p>        
+                <input type="checkbox" id="criteria7" name="criteria7" value="criteria7"><label for="criteria7"> Lab Recommendation - ¾ of the Height of the Teeth</label><br>
+                <input type="checkbox" id="criteria8" name="criteria8" value="criteria8"><label for="criteria8"> Halfway on Tooth</label><br>
+                <input type="checkbox" id="criteria9" name="criteria9" value="criteria9"><label for="criteria9"> Height of Contour</label><br>
+                <ul class = "tab">Additional Notes?</ul>
+                <p class="details">List Here:</p>
+                <input type="text" class="text">  
+            <li>Rx: Occlusal Surface Type</li>
+                <input type="checkbox" id="criteria10" name="criteria10" value="criteria10"><label for="criteria10"> Flat Plane</label><br>
+                <ul class = "tab">Additional Notes?</ul>
+                <p class="details">List Here:</p>
+                <input type="text" class="text">          
+            <li>Rx: Doctor Notes Met?</li>
+                <input type="checkbox" id="criteria19" name="criteria19" value="criteria19"><label for="criteria19"> Matches the Rx</label><br>
+                <ul class = "tab">Additional Notes?</ul>
+                <p class="details">List Here:</p>
+                <input type="text" class="text">
+<br>
+<br>
+<br>
+            <li>Workflow Used</li>
+                <input type="checkbox" id="criteria20" name="criteria20" value="criteria20"><label for="criteria20"> Milled</label><br>
+                <input type="checkbox" id="criteria21" name="criteria21" value="criteria21"><label for="criteria21"> Digital (Printed)</label><br>
+<br>
+<br>
+<br>
+                <input type="checkbox" id="criteria22" name="criteria22" value="criteria22"><label for="criteria22"> Block Out: Manually Block Out Deep Anatomy, Interproximals (Including Additional Block Out for Diastemas/Wide Gaps/Missing Teeth), and Incisal Edge/Buccal Side of Anteriors</label><br>            
+                    <p class="subtextSecond"><em>Identify any areas that required either additional or less blockout and why.</em></p>
+                    <ul class = "tab">Additional Notes?</ul>
+                    <p class="details">List Here:</p>
+                    <input type="text" class="text"><br>                 
+                <input type="checkbox" id="criteria23" name="criteria23" value="criteria23"><label for="criteria23"> Block Out: Additional Manual Block Out for Diastemas, Wide Gaps, and/or Missing Teeth</label><br>
+                    <p class="subtextSecond"><em>Identify any areas that required either additional or less blockout and why.</em></p>
+                    <ul class = "tab">Additional Notes?</ul>
+                    <p class="details">List Here:</p>
+                    <input type="text" class="text"><br>      
+                <input type="checkbox" id="criteria24" name="criteria24" value="criteria24"><label for="criteria24"> Block Out: 0.3° Block Out Angle if Milled, 0° Block Out Angle if Printed</label><br>  
+                    <ul class = "tab">Additional Notes?</ul>
+                    <p class="details">List Here:</p>
+                    <input type="text" class="text"><br> 
+                <input type="checkbox" id="criteria25" name="criteria25" value="criteria25"><label for="criteria25"> Offset: 0.020mm from Teeth to Splint</label><br>  
+                    <ul class = "tab">Additional Notes?</ul>
+                    <p class="details">List Here:</p>
+                    <input type="text" class="text"><br>                
+                <input type="checkbox" id="criteria26" name="criteria26" value="criteria26"><label for="criteria26"> Drill Diameter: 0.500-0.600mm if Milled, 0.000mm if Printed</label><br>
+                    <p class="subtextSecond"><em>Set value to the burr size.</em></p> 
+                    <ul class = "tab">Additional Notes?</ul>
+                    <p class="details">List Here:</p>
+                    <input type="text" class="text"><br>  
+                <input type="checkbox" id="criteria27" name="criteria27" value="criteria27"><label for="criteria27"> Coverage: Over Second Bicuspids</label><br>  
+                    <ul class = "tab">Additional Notes?</ul>
+                    <p class="details">List Here:</p>
+                    <input type="text" class="text"><br>  
+                <input type="checkbox" id="criteria28" name="criteria28" value="criteria28"><label for="criteria28"> Height on Tooth: Lingual Height on Tooth Straight Across at Gingival Margin</label><br>
+                    <ul class = "tab">Additional Notes?</ul>
+                    <p class="details">List Here:</p>
+                    <input type="text" class="text"><br>  
+                <input type="checkbox" id="criteria29" name="criteria29" value="criteria29"><label for="criteria29"> Flat Plane: Smoothing - All Divots Created after Adjustment have been Smoothed Out</label><br>  
+                    <p class="subtextSecond"><em>Use the lowest settings for size and strength. Note any areas that could not be smoothed fully to create a flat plane. Include smoothing on the buccal and lingual side of the interproximals.</em></p>
+                    <ul class = "tab">Additional Notes?</ul>
+                    <p class="details">List Here:</p>
+                    <input type="text" class="text"> 
+<br>
+<br>
+<br>
+                <input type="checkbox" id="criteria30" name="criteria30" value="criteria30"><label for="criteria30"> Flat Plane: Occlusal Surface is Flat with Minor Divots from the Antagonist</label><br>  
+                    <p class="subtextSecond"><em>The occlusal surface should be completely flat and level to the occlusal plane with only minor divots to account for adaptation with the antagonist. Manipulate the design to achieve balanced occlusion.</em></p>
+                    <ul class = "tab">Divot Locations?</ul>
+                    <p class="details">List Here:</p>
+                    <input type="text" class="text"> 
+                    <ul class = "tab">Additional Notes?</ul>
+                    <p class="details">List Here:</p>
+                    <input type="text" class="text"><br> 
+                <input type="checkbox" id="criteria38" name="criteria38" value="criteria38"><label for="criteria38"> Palatal Coverage: Straight Across at the Gingival Margin</label><br> 
+                    <ul class = "tab">Additional Notes?</ul>
+                    <p class="details">List Here:</p>
+                    <input type="text" class="text"><br> 
+                <input type="checkbox" id="criteria39" name="criteria39" value="criteria39"><label for="criteria39"> Functionality: Protrusive and Intrusive Movements</label><br> 
+                    <p class="subtextSecond"><em>Confirm using a digital articulator that the arches can move in a protrusive and intrusive manner without hang up on the antagonist.</em></p>
+                <input type="checkbox" id="criteria40" name="criteria40" value="criteria40"><label for="criteria40"> Functionality: Lateral Movements</label><br> 
+                    <p class="subtextSecond"><em>Confirm using a digital articulator that the arches can perform lateral movements without hang up on the antagonist.</em></p>
+                <input type="checkbox" id="criteria41" name="criteria41" value="criteria41"><label for="criteria41"> Bite: Opening at the Anterior</label><br> 
+                    <p class="subtextSecond"><em>Confirm that the bite was not opened intentionally. If it was to account for erupted teeth or for another reason, please list.</em></p>
+                    <ul class = "tab">Additional Notes?</ul>
+                    <p class="details">List Here:</p>
+                    <input type="text" class="text"><br>
+                <input type="checkbox" id="criteria42" name="criteria42" value="criteria42"><label for="criteria42"> Cosmetics: Smoothing</label><br> 
+                    <p class="subtextSecond"><em>Ripples are smoothed on all surfaces except for the intaglio surface.</em></p>
+                <input type="checkbox" id="criteria43" name="criteria43" value="criteria43"><label for="criteria43"> Cosmetics: No Contours or Anatomy on the Buccal/Facial Surface</label><br>   
+                <input type="checkbox" id="criteria44" name="criteria44" value="criteria44"><label for="criteria44"> Cosmetics: Patient Identifier</label><br> 
+                    <p class="subtextSecond"><em>Confirm that the patient’s first initial and last name and added to the left lingual side on the posteriors.</em></p>  
+<br>
+<br>
+<br>    
+                <ul class="bottom">Additional Case Notes?</ul>
+                <input type="text" class="bottomText">
+<br>
+<br>
+        </form>
+        </ul>
+    </div>
+    
+<div id = "followAnatomyContent">
+        <br>
+        <ul>
+        <form 
+        method = "POST" 
+        action="https://script.google.com/a/macros/meetdandy.com/s/AKfycbzri76UUZqaEGTDwf4a-s2tHl9mgld2Obq11_H8Gmpg-ilYnzQHw2uECGpt614NQvzk/exec">
+            <li>Rx: Material</li>
+                <input type="checkbox" id="criteria1" name="criteria1" value="criteria1"><label for="criteria1"> Astron</label><br>
+                <input type="checkbox" id="criteria1" name="criteria1" value="criteria1"><label for="criteria1"> KeySplint</label><br>
+            <li>Rx: Arch</li>
+                <input type="checkbox" id="criteria2" name="criteria2" value="criteria2"><label for="criteria2"> Upper</label><br>
+                <input type="checkbox" id="criteria3" name="criteria3" value="criteria3"><label for="criteria3"> Lower</label><br>
+                <input type="checkbox" id="criteria4" name="criteria4" value="criteria4"><label for="criteria4"> Both</label><br>
+            <li>Rx: Thickness</li>
+                <input type="checkbox" id="criteria5" name="criteria5" value="criteria5"><label for="criteria5"> 2.0mm</label><br>
+                <input type="checkbox" id="criteria6" name="criteria6" value="criteria6"><label for="criteria6"> Doctor Request</label><br>
+                <ul class = "tab">Additional Notes?</ul>
+                <p class="details">List Here:</p>
+                <input type="text" class="text">       
+            <li>Rx: Height on Tooth</li>
+                <p class="subtext"><em>Design should be cut straight across at the specified height.</em></p>        
+                <input type="checkbox" id="criteria7" name="criteria7" value="criteria7"><label for="criteria7"> Lab Recommendation - ¾ of the Height of the Teeth</label><br>
+                <input type="checkbox" id="criteria8" name="criteria8" value="criteria8"><label for="criteria8"> Halfway on Tooth</label><br>
+                <input type="checkbox" id="criteria9" name="criteria9" value="criteria9"><label for="criteria9"> Height of Contour</label><br>
+                <ul class = "tab">Additional Notes?</ul>
+                <p class="details">List Here:</p>
+                <input type="text" class="text">  
+            <li>Rx: Occlusal Surface Type</li>
+                <input type="checkbox" id="criteria11" name="criteria11" value="criteria11"><label for="criteria11"> Follow Anatomy</label><br>
+                <ul class = "tab">Additional Notes?</ul>
+                <p class="details">List Here:</p>
+                <input type="text" class="text">              
+            <li>Rx: Doctor Notes Met?</li>
+                <input type="checkbox" id="criteria19" name="criteria19" value="criteria19"><label for="criteria19"> Matches the Rx</label><br>
+                <ul class = "tab">Additional Notes?</ul>
+                <p class="details">List Here:</p>
+                <input type="text" class="text">
+<br>
+<br>
+<br>
+            <li>Workflow Used</li>
+                <input type="checkbox" id="criteria20" name="criteria20" value="criteria20"><label for="criteria20"> Milled</label><br>
+                <input type="checkbox" id="criteria21" name="criteria21" value="criteria21"><label for="criteria21"> Digital (Printed)</label><br>
+<br>
+<br>
+<br>
+                <input type="checkbox" id="criteria22" name="criteria22" value="criteria22"><label for="criteria22"> Block Out: Manually Block Out Deep Anatomy, Interproximals (Including Additional Block Out for Diastemas/Wide Gaps/Missing Teeth), and Incisal Edge/Buccal Side of Anteriors</label><br>            
+                    <p class="subtextSecond"><em>Identify any areas that required either additional or less blockout and why.</em></p>
+                    <ul class = "tab">Additional Notes?</ul>
+                    <p class="details">List Here:</p>
+                    <input type="text" class="text"><br>                 
+                <input type="checkbox" id="criteria23" name="criteria23" value="criteria23"><label for="criteria23"> Block Out: Additional Manual Block Out for Diastemas, Wide Gaps, and/or Missing Teeth</label><br>
+                    <p class="subtextSecond"><em>Identify any areas that required either additional or less blockout and why.</em></p>
+                    <ul class = "tab">Additional Notes?</ul>
+                    <p class="details">List Here:</p>
+                    <input type="text" class="text"><br>      
+                <input type="checkbox" id="criteria24" name="criteria24" value="criteria24"><label for="criteria24"> Block Out: 0.3° Block Out Angle if Milled, 0° Block Out Angle if Printed</label><br>  
+                    <ul class = "tab">Additional Notes?</ul>
+                    <p class="details">List Here:</p>
+                    <input type="text" class="text"><br> 
+                <input type="checkbox" id="criteria25" name="criteria25" value="criteria25"><label for="criteria25"> Offset: 0.020mm from Teeth to Splint</label><br>  
+                    <ul class = "tab">Additional Notes?</ul>
+                    <p class="details">List Here:</p>
+                    <input type="text" class="text"><br>                
+                <input type="checkbox" id="criteria26" name="criteria26" value="criteria26"><label for="criteria26"> Drill Diameter: 0.500-0.600mm if Milled, 0.000mm if Printed</label><br>
+                    <p class="subtextSecond"><em>Set value to the burr size.</em></p> 
+                    <ul class = "tab">Additional Notes?</ul>
+                    <p class="details">List Here:</p>
+                    <input type="text" class="text"><br>  
+                <input type="checkbox" id="criteria27" name="criteria27" value="criteria27"><label for="criteria27"> Coverage: Over Second Bicuspids</label><br>  
+                    <ul class = "tab">Additional Notes?</ul>
+                    <p class="details">List Here:</p>
+                    <input type="text" class="text"><br>  
+                <input type="checkbox" id="criteria28" name="criteria28" value="criteria28"><label for="criteria28"> Height on Tooth: Lingual Height on Tooth Straight Across at Gingival Margin</label><br>
+                    <ul class = "tab">Additional Notes?</ul>
+                    <p class="details">List Here:</p>
+                    <input type="text" class="text"><br>  
+<br>
+<br>
+<br>
+                <input type="checkbox" id="criteria31" name="criteria31" value="criteria31"><label for="criteria31"> Follow Anatomy: Occlusal Surface is Extruded Uniformly off the Anatomy</label><br>
+                    <p class="subtextSecond"><em>The occlusal surface should uniformly follow the anatomy of the teeth. Manipulate the design to achieve balanced occlusion.</em></p>
+                    <ul class = "tab">Additional Notes?</ul>
+                    <p class="details">List Here:</p>
+                    <input type="text" class="text"><br> 
+                <input type="checkbox" id="criteria38" name="criteria38" value="criteria38"><label for="criteria38"> Palatal Coverage: Straight Across at the Gingival Margin</label><br> 
+                    <ul class = "tab">Additional Notes?</ul>
+                    <p class="details">List Here:</p>
+                    <input type="text" class="text"><br> 
+                <input type="checkbox" id="criteria39" name="criteria39" value="criteria39"><label for="criteria39"> Functionality: Protrusive and Intrusive Movements</label><br> 
+                    <p class="subtextSecond"><em>Confirm using a digital articulator that the arches can move in a protrusive and intrusive manner without hang up on the antagonist.</em></p>
+                <input type="checkbox" id="criteria40" name="criteria40" value="criteria40"><label for="criteria40"> Functionality: Lateral Movements</label><br> 
+                    <p class="subtextSecond"><em>Confirm using a digital articulator that the arches can perform lateral movements without hang up on the antagonist.</em></p>
+                <input type="checkbox" id="criteria41" name="criteria41" value="criteria41"><label for="criteria41"> Bite: Opening at the Anterior</label><br> 
+                    <p class="subtextSecond"><em>Confirm that the bite was not opened intentionally. If it was to account for erupted teeth or for another reason, please list.</em></p>
+                    <ul class = "tab">Additional Notes?</ul>
+                    <p class="details">List Here:</p>
+                    <input type="text" class="text"><br>
+                <input type="checkbox" id="criteria42" name="criteria42" value="criteria42"><label for="criteria42"> Cosmetics: Smoothing</label><br> 
+                    <p class="subtextSecond"><em>Ripples are smoothed on all surfaces except for the intaglio surface.</em></p>
+                <input type="checkbox" id="criteria43" name="criteria43" value="criteria43"><label for="criteria43"> Cosmetics: No Contours or Anatomy on the Buccal/Facial Surface</label><br>   
+                <input type="checkbox" id="criteria44" name="criteria44" value="criteria44"><label for="criteria44"> Cosmetics: Patient Identifier</label><br> 
+                    <p class="subtextSecond"><em>Confirm that the patient’s first initial and last name and added to the left lingual side on the posteriors.</em></p>  
+<br>
+<br>
+<br>    
+                <ul class="bottom">Additional Case Notes?</ul>
+                <input type="text" class="bottomText">
+<br>
+<br>
+        </form>
+        </ul>
+    </div>
+
+    <div id = "posteriorIndentationsContent">
+        <br>
+        <ul>
+        <form 
+        method = "POST" 
+        action="https://script.google.com/a/macros/meetdandy.com/s/AKfycbzri76UUZqaEGTDwf4a-s2tHl9mgld2Obq11_H8Gmpg-ilYnzQHw2uECGpt614NQvzk/exec">
+            <li>Rx: Material</li>
+                <input type="checkbox" id="criteria1" name="criteria1" value="criteria1"><label for="criteria1"> Astron</label><br>
+                <input type="checkbox" id="criteria1" name="criteria1" value="criteria1"><label for="criteria1"> KeySplint</label><br>
+            <li>Rx: Arch</li>
+                <input type="checkbox" id="criteria2" name="criteria2" value="criteria2"><label for="criteria2"> Upper</label><br>
+                <input type="checkbox" id="criteria3" name="criteria3" value="criteria3"><label for="criteria3"> Lower</label><br>
+                <input type="checkbox" id="criteria4" name="criteria4" value="criteria4"><label for="criteria4"> Both</label><br>
+            <li>Rx: Thickness</li>
+                <input type="checkbox" id="criteria5" name="criteria5" value="criteria5"><label for="criteria5"> 2.0mm</label><br>
+                <input type="checkbox" id="criteria6" name="criteria6" value="criteria6"><label for="criteria6"> Doctor Request</label><br>
+                <ul class = "tab">Additional Notes?</ul>
+                <p class="details">List Here:</p>
+                <input type="text" class="text">       
+            <li>Rx: Height on Tooth</li>
+                <p class="subtext"><em>Design should be cut straight across at the specified height.</em></p>        
+                <input type="checkbox" id="criteria7" name="criteria7" value="criteria7"><label for="criteria7"> Lab Recommendation - ¾ of the Height of the Teeth</label><br>
+                <input type="checkbox" id="criteria8" name="criteria8" value="criteria8"><label for="criteria8"> Halfway on Tooth</label><br>
+                <input type="checkbox" id="criteria9" name="criteria9" value="criteria9"><label for="criteria9"> Height of Contour</label><br>
+                <ul class = "tab">Additional Notes?</ul>
+                <p class="details">List Here:</p>
+                <input type="text" class="text">  
+            <li>Rx: Occlusal Surface Type</li>
+                <input type="checkbox" id="criteria11" name="criteria11" value="criteria11"><label for="criteria11"> Posterior Indentations</label><br>
+                <ul class = "tab">Additional Notes?</ul>
+                <p class="details">List Here:</p>
+                <input type="text" class="text">              
+            <li>Rx: Doctor Notes Met?</li>
+                <input type="checkbox" id="criteria19" name="criteria19" value="criteria19"><label for="criteria19"> Matches the Rx</label><br>
+                <ul class = "tab">Additional Notes?</ul>
+                <p class="details">List Here:</p>
+                <input type="text" class="text">
+<br>
+<br>
+<br>
+            <li>Workflow Used</li>
+                <input type="checkbox" id="criteria20" name="criteria20" value="criteria20"><label for="criteria20"> Milled</label><br>
+                <input type="checkbox" id="criteria21" name="criteria21" value="criteria21"><label for="criteria21"> Digital (Printed)</label><br>
+<br>
+<br>
+<br>
+                <input type="checkbox" id="criteria22" name="criteria22" value="criteria22"><label for="criteria22"> Block Out: Manually Block Out Deep Anatomy, Interproximals (Including Additional Block Out for Diastemas/Wide Gaps/Missing Teeth), and Incisal Edge/Buccal Side of Anteriors</label><br>            
+                    <p class="subtextSecond"><em>Identify any areas that required either additional or less blockout and why.</em></p>
+                    <ul class = "tab">Additional Notes?</ul>
+                    <p class="details">List Here:</p>
+                    <input type="text" class="text"><br>                 
+                <input type="checkbox" id="criteria23" name="criteria23" value="criteria23"><label for="criteria23"> Block Out: Additional Manual Block Out for Diastemas, Wide Gaps, and/or Missing Teeth</label><br>
+                    <p class="subtextSecond"><em>Identify any areas that required either additional or less blockout and why.</em></p>
+                    <ul class = "tab">Additional Notes?</ul>
+                    <p class="details">List Here:</p>
+                    <input type="text" class="text"><br>      
+                <input type="checkbox" id="criteria24" name="criteria24" value="criteria24"><label for="criteria24"> Block Out: 0.3° Block Out Angle if Milled, 0° Block Out Angle if Printed</label><br>  
+                    <ul class = "tab">Additional Notes?</ul>
+                    <p class="details">List Here:</p>
+                    <input type="text" class="text"><br> 
+                <input type="checkbox" id="criteria25" name="criteria25" value="criteria25"><label for="criteria25"> Offset: 0.020mm from Teeth to Splint</label><br>  
+                    <ul class = "tab">Additional Notes?</ul>
+                    <p class="details">List Here:</p>
+                    <input type="text" class="text"><br>                
+                <input type="checkbox" id="criteria26" name="criteria26" value="criteria26"><label for="criteria26"> Drill Diameter: 0.500-0.600mm if Milled, 0.000mm if Printed</label><br>
+                    <p class="subtextSecond"><em>Set value to the burr size.</em></p> 
+                    <ul class = "tab">Additional Notes?</ul>
+                    <p class="details">List Here:</p>
+                    <input type="text" class="text"><br>  
+                <input type="checkbox" id="criteria27" name="criteria27" value="criteria27"><label for="criteria27"> Coverage: Over Second Bicuspids</label><br>  
+                    <ul class = "tab">Additional Notes?</ul>
+                    <p class="details">List Here:</p>
+                    <input type="text" class="text"><br>  
+                <input type="checkbox" id="criteria28" name="criteria28" value="criteria28"><label for="criteria28"> Height on Tooth: Lingual Height on Tooth Straight Across at Gingival Margin</label><br>
+                    <ul class = "tab">Additional Notes?</ul>
+                    <p class="details">List Here:</p>
+                    <input type="text" class="text"><br>  
+<br>
+<br>
+<br>
+                <input type="checkbox" id="criteria32" name="criteria32" value="criteria32"><label for="criteria32"> Posterior Indentations: Occlusal Surfaces Follows Anatomy of Posteriors and is Flat Plane at the Anteriors</label><br> 
+                    <p class="subtextSecond"><em>The occlusal surface should follow the anatomy of the posterior teeth and be completely flat and level to the occlusal plane at the anterior teeth.</em></p>
+                    <ul class = "tab">Additional Notes?</ul>
+                    <p class="details">List Here:</p>
+                    <input type="text" class="text"><br>
+                <input type="checkbox" id="criteria38" name="criteria38" value="criteria38"><label for="criteria38"> Palatal Coverage: Straight Across at the Gingival Margin</label><br> 
+                    <ul class = "tab">Additional Notes?</ul>
+                    <p class="details">List Here:</p>
+                    <input type="text" class="text"><br> 
+                <input type="checkbox" id="criteria39" name="criteria39" value="criteria39"><label for="criteria39"> Functionality: Protrusive and Intrusive Movements</label><br> 
+                    <p class="subtextSecond"><em>Confirm using a digital articulator that the arches can move in a protrusive and intrusive manner without hang up on the antagonist.</em></p>
+                <input type="checkbox" id="criteria40" name="criteria40" value="criteria40"><label for="criteria40"> Functionality: Lateral Movements</label><br> 
+                    <p class="subtextSecond"><em>Confirm using a digital articulator that the arches can perform lateral movements without hang up on the antagonist.</em></p>
+                <input type="checkbox" id="criteria41" name="criteria41" value="criteria41"><label for="criteria41"> Bite: Opening at the Anterior</label><br> 
+                    <p class="subtextSecond"><em>Confirm that the bite was not opened intentionally. If it was to account for erupted teeth or for another reason, please list.</em></p>
+                    <ul class = "tab">Additional Notes?</ul>
+                    <p class="details">List Here:</p>
+                    <input type="text" class="text"><br>
+                <input type="checkbox" id="criteria42" name="criteria42" value="criteria42"><label for="criteria42"> Cosmetics: Smoothing</label><br> 
+                    <p class="subtextSecond"><em>Ripples are smoothed on all surfaces except for the intaglio surface.</em></p>
+                <input type="checkbox" id="criteria43" name="criteria43" value="criteria43"><label for="criteria43"> Cosmetics: No Contours or Anatomy on the Buccal/Facial Surface</label><br>   
+                <input type="checkbox" id="criteria44" name="criteria44" value="criteria44"><label for="criteria44"> Cosmetics: Patient Identifier</label><br> 
+                    <p class="subtextSecond"><em>Confirm that the patient’s first initial and last name and added to the left lingual side on the posteriors.</em></p>  
+<br>
+<br>
+<br>    
+                <ul class="bottom">Additional Case Notes?</ul>
+                <input type="text" class="bottomText">
+<br>
+<br>
+        </form>
+        </ul>
+    </div>
+
+<div id = "astronSpecifics">
+    <br>
+    <li>Rx: Ball Clasps</li>
+        <input type="checkbox" id="criteria17" name="criteria17" value="criteria17"><label for="criteria17"> Requested and Added</label><br>
+        <input type="checkbox" id="criteria18" name="criteria18" value="criteria18"><label for="criteria18"> Not Requested</label><br>
+        <br>
+</div>
+
+<div id = "canineGuidanceSpecifics">
+    <br>
+    <li>Rx: Canine Guidance</li>
+        <input type="checkbox" id="criteria15" name="criteria15" value="criteria15"><label for="criteria15"> Requested and Added</label><br>
+    <br>
+    <input type="checkbox" id="criteria36" name="criteria36" value="criteria36"><label for="criteria36"> Canine Guidance: Posterior Disclusion</label><br> 
+        <p class="subtextSecond"><em>The posteriors should disclude by approximately 4.0-6.0mm. Check with a cross-sectional measurement.</em></p>
+        <ul class = "tab">Additional Notes?</ul>
+        <p class="details">List Here:</p>
+        <input type="text" class="text"><br>
+    <input type="checkbox" id="criteria37" name="criteria37" value="criteria37"><label for="criteria37"> Canine Guidance: Height Off Incisal Edge</label><br> 
+        <p class="subtextSecond"><em>The ramp should not exceed a height of 7.0 mm from the incisal edge but should be tailored per case to prioritize functionality. Check with a cross-sectional measurement.</em></p>
+        <ul class = "tab">Different Height Off Incisal Edge Used?</ul>
+        <p class="details">List Here:</p>
+        <input type="text" class="text"><br> 
+        <br>
+</div>
+
+<div id = "anteriorGuidanceSpecifics">
+    <br>
+    <li>Rx: Anterior Guidance</li>
+        <input type="checkbox" id="criteria15" name="criteria15" value="criteria15"><label for="criteria15"> Requested and Added</label><br>
+    <br>
+    <input type="checkbox" id="criteria33" name="criteria33" value="criteria33"><label for="criteria33"> Anterior Ramp/Guidance: Posterior Disclusion</label><br>
+        <p class="subtextSecond"><em>The posteriors should disclude during protrusive movement by approximately 4.0-6.0mm at the posteriors. Check with a cross-sectional measurement.</em></p>
+        <ul class = "tab">Additional Notes?</ul>
+        <p class="details">List Here:</p>
+        <input type="text" class="text"><br> 
+    <input type="checkbox" id="criteria34" name="criteria34" value="criteria34"><label for="criteria34"> Anterior Ramp/Guidance: Ramp Angle</label><br> 
+        <p class="subtextSecond"><em>The default ramp angle should be 22 degrees but should be tailored per case to prioritize functionality.</em></p>
+        <ul class = "tab">Different Ramp Angle Used?</ul>
+        <p class="details">List Here:</p>
+        <input type="text" class="text"><br> 
+    <input type="checkbox" id="criteria35" name="criteria35" value="criteria35"><label for="criteria35"> Anterior Ramp/Guidance: Height Off Incisal Edge</label><br> 
+        <p class="subtextSecond"><em>The ramp should not exceed a height of 6.0 mm from the incisal edge but should be tailored per case to prioritize functionality. Check with a cross-sectional measurement.</em></p>
+        <ul class = "tab">Different Height Off Incisal Edge Used?</ul>
+        <p class="details">List Here:</p>
+        <input type="text" class="text"><br> 
+    <br>
+</div>
+
+<div id="bottomButton">
+    <br>
+    <button type="submit">Submit Quality Results</button>
+    <br>
+</div>
+
+    <script>
+    function updateContent() {
+        document.getElementById("content").style.display = "none";
+        document.getElementById("bottomButton").style.display = "block";
+
+        let material = prompt("Material is Astron - Yes or No?");
+        lowerMaterial = material.toLowerCase();
+        if (lowerMaterial === "yes") {
+            document.getElementById("astronSpecifics").style.display = "block";
+        } else {
+            document.getElementById("astronSpecifics").style.display = "none";
+        }
+        
+        let surface = prompt("Occlusal Surface Type?");
+        lowerSurface = surface.toLowerCase();
+        if (lowerSurface === "flat plane") {
+            document.getElementById("flatPlaneContent").style.display = "block";
+        } else if (lowerSurface === "follow anatomy") {
+            document.getElementById("followAnatomyContent").style.display = "block";
+        } else {
+            document.getElementById("posteriorIndentationsContent").style.display = "block";
+        }
+        
+        let canineGuidance = prompt("Needs Canine Guidance - Yes or No?");
+        lowerCanineGuidance = canineGuidance.toLowerCase();
+        if (lowerCanineGuidance === "yes") {
+            document.getElementById("canineGuidanceSpecifics").style.display = "block";
+        } else {
+            document.getElementById("canineGuidanceSpecifics").style.display = "none";
+        }
+
+        let anteriorGuidance = prompt("Needs Anterior Guidance - Yes or No?");
+        lowerAnteriorGuidance = anteriorGuidance.toLowerCase();
+        if (lowerAnteriorGuidance === "yes") {
+            document.getElementById("anteriorGuidanceSpecifics").style.display = "block";
+        } else {
+            document.getElementById("anteriorGuidanceSpecifics").style.display = "none";
+        }
+    }
+
+    let materialButton = document.querySelector("button");
+    materialButton.addEventListener("click", updateContent);
+    </script>
+</body>
+</html>

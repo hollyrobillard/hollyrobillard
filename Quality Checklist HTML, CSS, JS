@@ -119,7 +119,9 @@
     <div id = "acetalContent">
         <br>
         <ul>
-        <form action="/action_page.php">
+        <form 
+        method = "POST" 
+        action="https://script.google.com/a/macros/meetdandy.com/s/AKfycbzri76UUZqaEGTDwf4a-s2tHl9mgld2Obq11_H8Gmpg-ilYnzQHw2uECGpt614NQvzk/exec">
             <li>Rx: Material</li>
                 <input type="checkbox" id="criteria1" name="criteria1" value="criteria1"><label for="criteria1"> Acetal</label><br>
             <li>Rx: Partial Coverage</li>
@@ -215,6 +217,7 @@
                 <input type="text" class="bottomText">
 <br>
 <br>
+<button type="submit">Submit Quality Results</button>
         </form>
         </ul>
     </div>
@@ -314,6 +317,9 @@
 <br>    
                 <ul class="bottom">Additional Case Notes?</ul>
                 <input type="text" class="bottomText">
+<br>
+<br>
+<button type="submit">Submit Quality Results</button>
 <br>
 <br>
         </form>
@@ -425,6 +431,7 @@
                 <input type="text" class="bottomText">
 <br>
 <br>
+<button type="submit">Submit Quality Results</button>
         </form>
         </ul>
     </div>
@@ -442,7 +449,7 @@
             document.getElementById("content").style.display = "none";
             document.getElementById("metalContent").style.display = "none";
             document.getElementById("acetalContent").style.display = "none";
-        } else if (lowerMaterial === "metal" || lowerMaterial === "titanium" || lowerMaterial === "cc" || lowerMaterial === "chromecobalt" || lowerMaterial === "chrome cobalt" || lowerMaterial === "chrome-cobalt") {
+        } else if (lowerMaterial === "metal" || lowerMaterial === "titanium" || lowerMaterial === "cc" || lowerMaterial === "chromecobalt" || lowerMaterial === "chrome cobalt" || lowerMaterial === "chrome-cobalt" || lowerMaterial === "chrome") {
             document.getElementById("metalContent").style.display = "block";
             document.getElementById("content").style.display = "none";
             document.getElementById("flexibleContent").style.display = "none";
